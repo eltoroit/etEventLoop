@@ -1,60 +1,45 @@
 <template>
-    <div class="slds-p-around_xx-large">
-        <lightning-layout horizontal-align="spread">
-            <lightning-layout-item size="12">
-                <lightning-layout class="slds-grid_vertical">
-                    <lightning-layout-item class="slds-text-heading_large">
-                        <div class="slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
-                    </lightning-layout-item>
-                    <lightning-layout-item class="slds-text-heading_small">
-                        <div class="slds-align_absolute-center">By @ELTOROIT</div>
-                    </lightning-layout-item>
-                    <lightning-layout-item class="slds-p-top_xx-large">
-                        <!-- <lightning-tabset variant="scoped">
-                            <lightning-tab label="Item One"> One Content ! </lightning-tab>
-                            <lightning-tab label="Item Two"> Two Content ! </lightning-tab>
-                            <lightning-tab label="Item Three"> Three Content ! </lightning-tab>
-                        </lightning-tabset> -->
-                        <div class="slds-tabs_default">
-                            <ul class="slds-tabs_default__nav" role="tablist" onclick={switchTab}>
-                                <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Cover">Cover</li>
-                                <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Powerpoint">Powerpoint</li>
-                                <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Simulator">Simulator</li>
-                                <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Demos1">Demos #1</li>
-                                <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Demos2">Demos #2</li>
-                            </ul>
-                            <div class="slds-p-horizontal_medium">
-                                <div class="slds-tabs_default__content slds-show" data-tab="Cover">Cover</div>
-                                <div class="slds-tabs_default__content slds-hide" data-tab="Powerpoint">Powerpoint</div>
-                                <div class="slds-tabs_default__content slds-hide" data-tab="Simulator">
-                                    <iframe src="simulator/simulator.html"></iframe>
+    <div class="fullPage">
+        <div class="slds-p-around_xx-large fullArea">
+            <lightning-layout horizontal-align="spread" class="fullArea">
+                <lightning-layout-item size="12" class="fullArea">
+                    <lightning-layout class="slds-grid_vertical fullArea">
+                        <lightning-layout-item class="slds-text-heading_large">
+                            <div class="slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
+                        </lightning-layout-item>
+                        <lightning-layout-item class="slds-text-heading_small">
+                            <div class="slds-align_absolute-center">By @ELTOROIT</div>
+                        </lightning-layout-item>
+                        <lightning-layout-item class="slds-p-top_xx-large fullArea">
+                            <!-- <lightning-tabset variant="scoped">
+                                <lightning-tab label="Item One"> One Content ! </lightning-tab>
+                                <lightning-tab label="Item Two"> Two Content ! </lightning-tab>
+                                <lightning-tab label="Item Three"> Three Content ! </lightning-tab>
+                            </lightning-tabset> -->
+                            <div class="slds-tabs_default fullArea">
+                                <ul class="slds-tabs_default__nav" role="tablist" onclick={switchTab}>
+                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Cover">Cover</li>
+                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Powerpoint">Powerpoint</li>
+                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Simulator">Simulator</li>
+                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Demos1">Demos #1</li>
+                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Demos2">Demos #2</li>
+                                </ul>
+                                <div data-id="tabContent" class="slds-p-horizontal_medium fullArea">
+                                    <div class="slds-tabs_default__content slds-show" data-tab="Cover">
+                                        <iframe src="/resources/simulator/simulator.html#/1" style="width: 100%">cover</iframe>
+                                    </div>
+                                    <div class="slds-tabs_default__content slds-hide" data-tab="Powerpoint">Powerpoint</div>
+                                    <div class="slds-tabs_default__content slds-hide" data-tab="Simulator" style="height: 100%">
+                                        <iframe src="/resources/simulator/simulator.html?timer=1000#/2" style="width: 100%">Simulator</iframe>
+                                    </div>
+                                    <div class="slds-tabs_default__content slds-hide" data-tab="Demos1">Demos1</div>
+                                    <div class="slds-tabs_default__content slds-hide" data-tab="Demos2">Demos2</div>
                                 </div>
-                                <div class="slds-tabs_default__content slds-hide" data-tab="Demos1">Demos1</div>
-                                <div class="slds-tabs_default__content slds-hide" data-tab="Demos2">Demos2</div>
                             </div>
-                        </div>
-                    </lightning-layout-item>
-                </lightning-layout>
-            </lightning-layout-item>
-        </lightning-layout>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
     </div>
-
-    <!-- <ul class="slds-has-dividers_around slds-has-block-links_space">
-                            <li class="slds-item">
-                                <a href="javascript:void(0);">Powerpoint Slides</a>
-                            </li>
-                            <li class="slds-item">
-                                <a href="simulator.html#/2">Simulator</a>
-                            </li>
-                            <li class="slds-item">
-                                <a href="javascript:void(0);">List Item</a>
-                            </li>
-                        </ul> -->
-
-    <lightning-button variant="brand" label="Base5" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
-
-    <hr />
-    <img src="./resources/lwc.png" />
-    <a href="/resources/lwc.png">PNG</a>
-    v1.0
 </template>
