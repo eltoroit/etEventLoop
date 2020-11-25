@@ -1,0 +1,35 @@
+[
+	{ "lineNumber": "1", "console": "+|Hello world (🌎) and moon! (🌙)" },
+
+	{ "lineNumber": "2", "stack": "+|Stack: 1" },
+	{ "lineNumber": "3", "stack": "+|Stack: 2" },
+	{ "lineNumber": "4", "stack": "+|Stack: 3" },
+	{ "lineNumber": "5", "stack": "-|Stack: 3" },
+	{ "lineNumber": "6", "stack": "-|Stack: 2" },
+	{ "lineNumber": "7", "stack": "-|Stack: 1" },
+
+	{ "lineNumber": "8", "webAPI": "+|WebAPI: 1" },
+	{ "lineNumber": "9", "webAPI": "+|WebAPI: 2" },
+	{ "lineNumber": "10", "webAPI": "+|WebAPI: 3" },
+	{ "lineNumber": "11", "webAPI": "-|WebAPI: 3" },
+	{ "lineNumber": "12", "webAPI": "-|WebAPI: 1" },
+	{ "lineNumber": "13", "webAPI": "-|WebAPI: 2" },
+
+	{ "lineNumber": "14", "taskQueue": "+|TaskQueue: 1" },
+	{ "lineNumber": "15", "taskQueue": "+|TaskQueue: 2" },
+	{ "lineNumber": "16", "taskQueue": "+|TaskQueue: 3" },
+	{ "lineNumber": "17", "taskQueue": "-|TaskQueue: 3" },
+	{ "lineNumber": "18", "taskQueue": "-|TaskQueue: 1" },
+	{ "lineNumber": "19", "taskQueue": "-|TaskQueue: 2" },
+
+	{ "lineNumber": "20", "microtaskQueue": "+|MicrotaskQueue: 1" },
+	{ "lineNumber": "21", "microtaskQueue": "+|MicrotaskQueue: 2" },
+	{ "lineNumber": "22", "microtaskQueue": "+|MicrotaskQueue: 3" },
+	{ "lineNumber": "23", "microtaskQueue": "-|MicrotaskQueue: 3" },
+	{ "lineNumber": "24", "microtaskQueue": "-|MicrotaskQueue: 1" },
+	{ "lineNumber": "25", "microtaskQueue": "-|MicrotaskQueue: 2" },
+
+	{ "lineNumber": "26", "console": "+|Console: 1" },
+	{ "lineNumber": "27", "console": "+|Console: 2" },
+	{ "lineNumber": "28", "console": "+|Console: 3" }
+]

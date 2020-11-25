@@ -1,0 +1,63 @@
+[
+	{
+		"lineNumber": "17",
+		"stack": "+|(anonymous)"
+	},
+	{
+		"lineNumber": "12",
+		"stack": "+|printSquare(4)"
+	},
+	{
+		"lineNumber": "13"
+	},
+	{
+		"lineNumber": "7",
+		"stack": "+|square(4)"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "2",
+		"stack": "+|multiply(4, 4)"
+	},
+	{
+		"lineNumber": "3"
+	},
+	{
+		"lineNumber": "4"
+	},
+	{
+		"lineNumber": "5",
+		"stack": "-|multiply(4, 4)"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "10",
+		"stack": "-|square(4)"
+	},
+	{
+		"lineNumber": "13"
+	},
+	{
+		"lineNumber": "14",
+		"console": "+|16"
+	},
+	{
+		"lineNumber": "15",
+		"stack": "-|printSquare(4)"
+	},
+	{
+		"lineNumber": "18",
+		"console": "+|Done"
+	},
+	{
+		"lineNumber": "18",
+		"stack": "-|(anonymous)"
+	}
+]

@@ -1,0 +1,56 @@
+[
+	{
+		"lineNumber": "12",
+		"stack": "+|(anonymous)",
+		"console": "+|1"
+	},
+	{
+		"lineNumber": "13"
+	},
+	{
+		"lineNumber": "2",
+		"stack": "+|timer(2000)"
+	},
+	{
+		"lineNumber": "3",
+		"console": "+|2"
+	},
+	{
+		"lineNumber": "4-8",
+		"webAPI": "+|2000ms => function(){...}"
+	},
+	{
+		"lineNumber": "9",
+		"console": "+|4"
+	},
+	{
+		"lineNumber": "10",
+		"stack": "-|timer(2000)"
+	},
+	{
+		"lineNumber": "14",
+		"console": "+|Done"
+	},
+	{
+		"lineNumber": "1",
+		"stack": "-|(anonymous)"
+	},
+	{
+		"lineNumber": "1",
+		"webAPI": "-|2000ms => function(){...}",
+		"taskQueue": "+|function(){...}"
+	},
+	{
+		"lineNumber": "5-7",
+		"taskQueue": "-|function(){...}",
+		"stack": "+|function(){...}"
+	},
+	{
+		"lineNumber": "6",
+		"console": "+|3"
+	},
+	{
+		"lineNumber": "7",
+		"stack": "-|function(){...}"
+	}
+]

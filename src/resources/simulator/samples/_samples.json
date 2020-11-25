@@ -1,0 +1,35 @@
+{
+	"slide": {
+		"indexh": 1,
+		"indexv": 0
+	},
+	"sampleSteps": {
+		"lineNumber": "#",
+		"stack": "+|MESSAGE",
+		"webAPI": "+|MESSAGE",
+		"taskQueue": "+|MESSAGE",
+		"console": "+|MESSAGE"
+	},
+	"demos": [
+		{
+			"name": "Basic calls (Synchronous)",
+			"code": "BasicCalls"
+		},
+		{
+			"name": "Simple Timer",
+			"code": "SetTimeout"
+		},
+		{
+			"name": "Wait Zero milliseconds",
+			"code": "SetTimeoutZero"
+		},
+		{
+			"name": "TEST: Fill the boxes",
+			"code": "TestApp"
+		},
+		{
+			"name": "TEST: Long (scrolls)",
+			"code": "TestHelloWorld"
+		}
+	]
+}
