@@ -10,26 +10,33 @@
                         <div class="slds-align_absolute-center">By @ELTOROIT</div>
                     </lightning-layout-item>
                     <lightning-layout-item class="slds-p-top_xx-large">
-                        <c-tabset>
+                        <c-tabset default-tab="Who Am I?">
                             <c-tab label="Who Am I?">
                                 <div class="slds-align_absolute-center pageSize" style="background-color: black">
                                     <img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
                                 </div>
                             </c-tab>
+                            <c-tab label="Recording">
+                                <div class="slds-align_absolute-center pageSize" style="background-color: black">
+                                    <div style="color: white">Recording</div>
+                                </div>
+                            </c-tab>
                             <c-tab label="Powerpoint">
-                                <div class="pageSize">Powerpoint</div>
+                                <div class="slds-align_absolute-center pageSize" style="background-color: black">
+                                    <div style="color: white">Powerpoint</div>
+                                </div>
                             </c-tab>
                             <c-tab label="Simulator">
                                 <iframe src="/resources/simulator/simulator.html?timer=1000#/2" class="pageSize">Simulator</iframe>
                             </c-tab>
+                            <c-tab label="Demo: Blink">
+                                <div class="pageSize">
+                                    <c-demo-blink></c-demo-blink>
+                                </div>
+                            </c-tab>
                             <c-tab label="Demo: Loops">
                                 <div class="pageSize">
                                     <c-demo-loops></c-demo-loops>
-                                </div>
-                            </c-tab>
-                            <c-tab label="Demos2">
-                                <div class="pageSize">
-                                    <button class="btn" onclick={onBtnClick}>Test</button>
                                 </div>
                             </c-tab>
                         </c-tabset>

@@ -31,7 +31,7 @@ export default class Tabset extends LightningElement {
     tabs = [];
     classes = {};
     _variant = 'standard'; // standard, scoped, and vertical
-    @api activeTab = 'NONE';
+    @api defaultTab = 'NONE';
 
     @api
     get variant() {
@@ -48,7 +48,7 @@ export default class Tabset extends LightningElement {
             let tabs = slot.assignedNodes();
             this.tabs = tabs.map((tab, idx) => ({ idx: idx, label: tab.label }));
             Promise.resolve().then(() => {
-                let idx = this.tabs.findIndex((tab) => tab.label === this.activeTab);
+                let idx = this.tabs.findIndex((tab) => tab.label === this.defaultTab);
                 idx = idx < 0 ? 0 : idx;
                 this.showtab(idx);
             });

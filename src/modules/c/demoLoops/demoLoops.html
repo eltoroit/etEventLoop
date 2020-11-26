@@ -11,18 +11,25 @@
             <lightning-spinner variant="brand"></lightning-spinner>
         </template>
     </div>
-    <c-tabset variant="vertical" active-tab="While Loop">
+    <c-tabset variant="vertical" default-tab="Test">
         <c-tab label="Test">
-            <c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
-            <c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
+            <div>
+                <c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
+                <c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/testLoop.png"></c-show-code>
+                </c-tab>
+            </c-tabset>
         </c-tab>
         <c-tab label="While Loop">
             <div>
-                <c-button if:false={showSpinner} label="Start While Loop" onclick={onWhileLoop}></c-button>
+                <c-button label="Start While Loop" onclick={onWhileLoop}></c-button>
             </div>
-            <c-tabset active-tab="Notes">
+            <c-tabset default-tab="Code">
                 <c-tab label="Code">
-                    <c-show-code path="loops/while.png"></c-show-code>
+                    <c-show-code path="loops/whileLoop.png"></c-show-code>
                 </c-tab>
                 <c-tab label="Notes">
                     <c-show-notes>
@@ -32,8 +39,38 @@
                 </c-tab>
             </c-tabset>
         </c-tab>
-        <c-tab label="Timeout">DOS</c-tab>
-        <c-tab label="Promise">TRES</c-tab>
+        <c-tab label="Promise">
+            <div>
+                <c-button label="Start Promise Loop" onclick={onPromiseLoop}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/promiseLoop.png"></c-show-code>
+                </c-tab>
+                <c-tab label="Notes">
+                    <c-show-notes>
+                        <li>The button remains clicked (red) during the execution of the loop</li>
+                        <li>Where is the spinner?</li>
+                    </c-show-notes>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
+        <c-tab label="setTimeout">
+            <div>
+                <c-button label="Start setTimeout Loop" onclick={onSetTimeoutLoop}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/setTimeoutLoop.png"></c-show-code>
+                </c-tab>
+                <c-tab label="Notes">
+                    <c-show-notes>
+                        <li>The button remains clicked (red) during the execution of the loop</li>
+                        <li>Where is the spinner?</li>
+                    </c-show-notes>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
     </c-tabset>
     <div class="slds-align_absolute-center slds-p-top_medium">Hint: Open the inspector tool and watch the event working</div>
 </template>
