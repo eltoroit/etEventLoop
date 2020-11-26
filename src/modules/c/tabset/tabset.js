@@ -31,6 +31,7 @@ export default class Tabset extends LightningElement {
     tabs = [];
     classes = {};
     _variant = 'standard'; // standard, scoped, and vertical
+    @api activeTab = 'NONE';
 
     @api
     get variant() {
@@ -45,7 +46,9 @@ export default class Tabset extends LightningElement {
         let tabs = Array.from(this.querySelectorAll('c-tab'));
         this.tabs = tabs.map((tab, idx) => ({ idx: idx, label: tab.label }));
         Promise.resolve().then(() => {
-            this.showtab(0);
+            let idx = this.tabs.findIndex((tab) => tab.label === this.activeTab);
+            idx = idx < 0 ? 0 : idx;
+            this.showtab(idx);
         });
     }
 

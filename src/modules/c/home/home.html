@@ -10,7 +10,7 @@
                         <div class="slds-align_absolute-center">By @ELTOROIT</div>
                     </lightning-layout-item>
                     <lightning-layout-item class="slds-p-top_xx-large">
-                        <c-tabset>
+                        <c-tabset active-tab="Demo: Loops">
                             <c-tab label="Cover">
                                 <iframe src="/resources/simulator/simulator.html#/1" class="iframeSize">cover</iframe>
                             </c-tab>
@@ -18,8 +18,8 @@
                             <c-tab label="Simulator">
                                 <iframe src="/resources/simulator/simulator.html?timer=1000#/2" class="iframeSize">Simulator</iframe>
                             </c-tab>
-                            <c-tab label="Demos1">
-                                <c-demos1></c-demos1>
+                            <c-tab label="Demo: Loops">
+                                <c-demo-loops></c-demo-loops>
                             </c-tab>
                             <c-tab label="Demos2"><button class="btn" onclick={onBtnClick}>Test</button></c-tab>
                         </c-tabset>
