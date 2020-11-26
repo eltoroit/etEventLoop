@@ -24,11 +24,6 @@
         "yarn": ">=1.9.4"
     },
     "homepage": "https://github.com/Andres Perez/my-app",
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
     "keywords": [
         "lwc"
     ],
