@@ -1,3 +1,81 @@
 <template>
-    
+    <lightning-layout multiple-rows horizontal-align="spread">
+        <lightning-layout-item size="8">
+            <div class="slds-p-vertical_large slds-p-right_large">
+                <div class="slds-text-heading_large slds-p-bottom_x-large">How To Blink?</div>
+                <div class="slds-text-heading_medium slds-p-bottom_x-large">
+                    I want to make this image blink, it should change the visibility every half second. The blinking starts and stops by clicking on a button.
+                </div>
+                <div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" style="background-color: black; text-align: center">
+            <div style="margin: 50px">
+                <!-- https://commons.wikimedia.org/wiki/File:Rotating_globe.gif -->
+                <img data-id="globe" src="/resources/demos/RotatingGlobe.gif" style="width: 50%" />
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    <c-tabset variant="vertical" default-tab="Test">
+        <c-tab label="Test">
+            <div>
+                <c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
+                <c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/testLoop.png"></c-show-code>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
+        <c-tab label="While Loop">
+            <div>
+                <c-button label="Start While Loop" onclick={onWhileLoop}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/whileLoop.png"></c-show-code>
+                </c-tab>
+                <c-tab label="Notes">
+                    <c-show-notes>
+                        <li>The button remains clicked (red) during the execution of the loop</li>
+                        <li>Where is the spinner?</li>
+                    </c-show-notes>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
+        <c-tab label="Promise">
+            <div>
+                <c-button label="Start Promise Loop" onclick={onPromiseLoop}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/promiseLoop.png"></c-show-code>
+                </c-tab>
+                <c-tab label="Notes">
+                    <c-show-notes>
+                        <li>The button remains clicked (red) during the execution of the loop</li>
+                        <li>Where is the spinner?</li>
+                    </c-show-notes>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
+        <c-tab label="setTimeout">
+            <div>
+                <c-button label="Start setTimeout Loop" onclick={onSetTimeoutLoop}></c-button>
+            </div>
+            <c-tabset default-tab="Code">
+                <c-tab label="Code">
+                    <c-show-code path="loops/setTimeoutLoop.png"></c-show-code>
+                </c-tab>
+                <c-tab label="Notes">
+                    <c-show-notes>
+                        <li>The button remains clicked (red) during the execution of the loop</li>
+                        <li>Where is the spinner?</li>
+                    </c-show-notes>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
+    </c-tabset>
+    <div class="slds-align_absolute-center slds-p-top_medium">Hint: Open the inspector tool and watch the event working</div>
 </template>
