@@ -1,9 +1,6 @@
-.fullPage {
-    height: 100vh;
-}
-
-.fullArea {
-    height: 100%;
+.iframeSize {
+    height: calc(100vh - 250px);
+    width: 100%;
 }
 
 .btn:active {

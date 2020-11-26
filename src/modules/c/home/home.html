@@ -1,33 +1,31 @@
 <template>
-    <div class="fullPage">
-        <div class="slds-p-around_xx-large fullArea">
-            <lightning-layout horizontal-align="spread" class="fullArea">
-                <lightning-layout-item size="12" class="fullArea">
-                    <lightning-layout class="slds-grid_vertical fullArea">
-                        <lightning-layout-item class="slds-text-heading_large">
-                            <div class="slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
-                        </lightning-layout-item>
-                        <lightning-layout-item class="slds-text-heading_small">
-                            <div class="slds-align_absolute-center">By @ELTOROIT</div>
-                        </lightning-layout-item>
-                        <lightning-layout-item class="slds-p-top_xx-large fullArea">
-                            <c-tabset class="fullArea">
-                                <c-tab label="Cover">
-                                    <iframe src="/resources/simulator/simulator.html#/1" style="width: 100%">cover</iframe>
-                                </c-tab>
-                                <c-tab label="Powerpoint">Powerpoint</c-tab>
-                                <c-tab label="Simulator">
-                                    <iframe src="/resources/simulator/simulator.html?timer=1000#/2" style="width: 100%">Simulator</iframe>
-                                </c-tab>
-                                <c-tab label="Demos1">
-                                    <button class="btn" onclick={onBtnClick}>Test</button>
-                                </c-tab>
-                                <c-tab label="Demos2">Content #3</c-tab>
-                            </c-tabset>
-                        </lightning-layout-item>
-                    </lightning-layout>
-                </lightning-layout-item>
-            </lightning-layout>
-        </div>
+    <div class="slds-p-around_xx-large">
+        <lightning-layout horizontal-align="spread">
+            <lightning-layout-item size="12">
+                <lightning-layout class="slds-grid_vertical">
+                    <lightning-layout-item class="slds-text-heading_large">
+                        <div class="slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
+                    </lightning-layout-item>
+                    <lightning-layout-item class="slds-text-heading_small">
+                        <div class="slds-align_absolute-center">By @ELTOROIT</div>
+                    </lightning-layout-item>
+                    <lightning-layout-item class="slds-p-top_xx-large">
+                        <c-tabset>
+                            <c-tab label="Cover">
+                                <iframe src="/resources/simulator/simulator.html#/1" class="iframeSize">cover</iframe>
+                            </c-tab>
+                            <c-tab label="Powerpoint">Powerpoint</c-tab>
+                            <c-tab label="Simulator">
+                                <iframe src="/resources/simulator/simulator.html?timer=1000#/2" class="iframeSize">Simulator</iframe>
+                            </c-tab>
+                            <c-tab label="Demos1">
+                                <button class="btn" onclick={onBtnClick}>Test</button>
+                            </c-tab>
+                            <c-tab label="Demos2">Content #3</c-tab>
+                        </c-tabset>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
     </div>
 </template>

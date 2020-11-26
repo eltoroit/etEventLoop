@@ -2,28 +2,28 @@ import { LightningElement, api } from 'lwc';
 
 const CLASSES = {
     standard: {
-        div: 'slds-tabs_default fullArea',
+        div: 'slds-tabs_default',
         ul: 'slds-tabs_default__nav',
         li: 'slds-tabs_default__item',
         span: 'slds-tabs_default__link',
-        body: 'slds-p-horizontal_medium fullArea',
-        tab: 'slds-tabs_default__content fullArea'
+        body: 'slds-p-horizontal_medium',
+        tab: 'slds-tabs_default__content'
     },
     scoped: {
-        div: 'slds-tabs_scoped fullArea',
+        div: 'slds-tabs_scoped',
         ul: 'slds-tabs_scoped__nav',
         li: 'slds-tabs_scoped__item',
         span: 'slds-tabs_scoped__link',
         body: 'fullArea',
-        tab: 'slds-tabs_scoped__content fullArea'
+        tab: 'slds-tabs_scoped__content'
     },
     vertical: {
-        div: 'slds-vertical-tabs fullArea',
+        div: 'slds-vertical-tabs',
         ul: 'slds-vertical-tabs__nav',
         li: 'slds-vertical-tabs__nav-item',
         span: 'slds-vertical-tabs__link',
-        body: 'slds-p-horizontal_medium fullArea',
-        tab: 'slds-vertical-tabs__content fullArea'
+        body: 'slds-p-horizontal_medium',
+        tab: 'slds-vertical-tabs__content'
     }
 };
 
