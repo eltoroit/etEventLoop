@@ -6,7 +6,7 @@ export default class Home extends LightningElement {
             let height;
             let iframes;
 
-            this.showTab('Simulator');
+            this.showTab('Demos1');
             height = this.template.querySelector('div[data-id="tabContent"]').getBoundingClientRect().height;
             height = height - 30;
 
@@ -17,9 +17,18 @@ export default class Home extends LightningElement {
         });
     }
 
-    switchTab(event) {
+    onSwitchTab(event) {
         let tabName = event.target.getAttribute('data-tab');
         this.showTab(tabName);
+    }
+
+    onBtnClick() {
+        let start = new Date();
+        let stop = start.setSeconds(start.getSeconds() + 5);
+        while (Date.now() < stop) {
+            let dttm = new Date();
+            console.log(dttm.toJSON() + ' ' + dttm.getMilliseconds());
+        }
     }
 
     showTab(tabName) {

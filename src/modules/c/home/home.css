@@ -5,3 +5,7 @@
 .fullArea {
     height: 100%;
 }
+
+.btn:active {
+    background-color: red;
+}
