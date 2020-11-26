@@ -11,31 +11,19 @@
                             <div class="slds-align_absolute-center">By @ELTOROIT</div>
                         </lightning-layout-item>
                         <lightning-layout-item class="slds-p-top_xx-large fullArea">
-                            <div class="slds-tabs_default fullArea">
-                                <ul class="slds-tabs_default__nav" role="tablist" onclick={onSwitchTab}>
-                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Cover">Cover</li>
-                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Powerpoint">Powerpoint</li>
-                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Simulator">Simulator</li>
-                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Demos1">Demos #1</li>
-                                    <li class="slds-tabs_default__item slds-tabs_default__link" data-tab="Demos2">Demos #2</li>
-                                </ul>
-                                <div data-id="tabContent" class="slds-p-horizontal_medium fullArea">
-                                    <div class="slds-tabs_default__content slds-show" data-tab="Cover">
-                                        <iframe src="/resources/simulator/simulator.html#/1" style="width: 100%">cover</iframe>
-                                    </div>
-                                    <div class="slds-tabs_default__content slds-hide" data-tab="Powerpoint">Powerpoint</div>
-                                    <div class="slds-tabs_default__content slds-hide" data-tab="Simulator" style="height: 100%">
-                                        <iframe src="/resources/simulator/simulator.html?timer=1000#/2" style="width: 100%">Simulator</iframe>
-                                    </div>
-                                    <div class="slds-tabs_default__content slds-hide" data-tab="Demos1">
-                                        <c-demos1>Hello World</c-demos1>
-                                    </div>
-                                    <div class="slds-tabs_default__content slds-hide" data-tab="Demos2">
-                                        <!-- <c-demos2></c-demos2> -->
-                                        <button class="btn" onclick={onBtnClick}>Test</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <c-tabset class="fullArea">
+                                <c-tab label="Cover">
+                                    <iframe src="/resources/simulator/simulator.html#/1" style="width: 100%">cover</iframe>
+                                </c-tab>
+                                <c-tab label="Powerpoint">Powerpoint</c-tab>
+                                <c-tab label="Simulator">
+                                    <iframe src="/resources/simulator/simulator.html?timer=1000#/2" style="width: 100%">Simulator</iframe>
+                                </c-tab>
+                                <c-tab label="Demos1">
+                                    <button class="btn" onclick={onBtnClick}>Test</button>
+                                </c-tab>
+                                <c-tab label="Demos2">Content #3</c-tab>
+                            </c-tabset>
                         </lightning-layout-item>
                     </lightning-layout>
                 </lightning-layout-item>

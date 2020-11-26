@@ -1,0 +1,14 @@
+<template>
+    <div class={classes.div}>
+        <ul class={classes.ul} onclick={onSwitchTab}>
+            <template for:each={tabs} for:item="tab">
+                <li key={tab.idx} class={classes.li} data-idx={tab.idx}>
+                    <span class={classes.span} data-idx-span={tab.idx}>{tab.label}</span>
+                </li>
+            </template>
+        </ul>
+        <div class={classes.body}>
+            <slot onslotchange={onSlotChange} data-id="slot"></slot>
+        </div>
+    </div>
+</template>

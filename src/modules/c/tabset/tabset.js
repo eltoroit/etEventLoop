@@ -1,0 +1,90 @@
+import { LightningElement, api } from 'lwc';
+
+const CLASSES = {
+    standard: {
+        div: 'slds-tabs_default fullArea',
+        ul: 'slds-tabs_default__nav',
+        li: 'slds-tabs_default__item',
+        span: 'slds-tabs_default__link',
+        body: 'slds-p-horizontal_medium fullArea',
+        tab: 'slds-tabs_default__content fullArea'
+    },
+    scoped: {
+        div: 'slds-tabs_scoped fullArea',
+        ul: 'slds-tabs_scoped__nav',
+        li: 'slds-tabs_scoped__item',
+        span: 'slds-tabs_scoped__link',
+        body: 'fullArea',
+        tab: 'slds-tabs_scoped__content fullArea'
+    },
+    vertical: {
+        div: 'slds-vertical-tabs fullArea',
+        ul: 'slds-vertical-tabs__nav',
+        li: 'slds-vertical-tabs__nav-item',
+        span: 'slds-vertical-tabs__link',
+        body: 'slds-p-horizontal_medium fullArea',
+        tab: 'slds-vertical-tabs__content fullArea'
+    }
+};
+
+export default class Tabset extends LightningElement {
+    tabs = [];
+    classes = {};
+    _variant = 'standard'; // standard, scoped, and vertical
+
+    @api
+    get variant() {
+        return this._variant;
+    }
+    set variant(value) {
+        this._variant = value;
+        this.setVariant();
+    }
+
+    onSlotChange() {
+        let tabs = Array.from(this.querySelectorAll('c-tab'));
+        this.tabs = tabs.map((tab, idx) => ({ idx: idx, label: tab.label }));
+        Promise.resolve().then(() => {
+            this.showtab(0);
+        });
+    }
+
+    onSwitchTab(event) {
+        let tabIdx = event.target.getAttribute('data-idx-span');
+        this.showtab(Number(tabIdx));
+    }
+
+    showtab(tabIdx) {
+        let tabs;
+
+        // Update classes used
+        this.setVariant();
+
+        // Tabs
+        tabs = Array.from(this.template.querySelectorAll('li[data-idx]'));
+        tabs.forEach((tab) => {
+            if (Number(tab.attributes['data-idx'].value) === tabIdx) {
+                tab.classList.add('slds-is-active');
+            } else {
+                tab.classList.remove('slds-is-active');
+            }
+        });
+
+        // Pages
+        tabs = Array.from(this.template.querySelector('slot[data-id="slot"]').assignedNodes());
+        tabs.forEach((tab, idx) => {
+            tab.isHidden = idx !== tabIdx;
+        });
+    }
+
+    setVariant() {
+        this.classes = CLASSES[this.variant];
+
+        Promise.resolve().then(() => {
+            let tabs = Array.from(this.template.querySelector('slot[data-id="slot"]').assignedNodes());
+            tabs.forEach((tab) => {
+                tab.tabClass = this.classes.tab;
+            });
+        });
+    }
+}

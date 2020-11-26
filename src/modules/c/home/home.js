@@ -7,7 +7,7 @@ export default class Home extends LightningElement {
             let iframes;
 
             this.showTab('Demos1');
-            height = this.template.querySelector('div[data-id="tabContent"]').getBoundingClientRect().height;
+            height = this.template.querySelector('c-tabset').getBoundingClientRect().height;
             height = height - 30;
 
             iframes = this.template.querySelectorAll('iframe');
@@ -33,9 +33,6 @@ export default class Home extends LightningElement {
 
     showTab(tabName) {
         let tabs;
-
-        let iframe = this.template.querySelectorAll('iframe')[0];
-        console.log(iframe);
 
         tabs = Array.from(this.template.querySelectorAll('li[data-tab]'));
         tabs.forEach((tab) => {
