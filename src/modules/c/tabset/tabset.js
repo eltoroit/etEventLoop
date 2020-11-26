@@ -22,7 +22,7 @@ const CLASSES = {
         ul: 'slds-vertical-tabs__nav',
         li: 'slds-vertical-tabs__nav-item',
         span: 'slds-vertical-tabs__link',
-        body: 'slds-p-horizontal_medium',
+        body: 'slds-p-horizontal_medium fullArea',
         tab: 'slds-vertical-tabs__content'
     }
 };
@@ -43,13 +43,16 @@ export default class Tabset extends LightningElement {
     }
 
     onSlotChange() {
-        let tabs = Array.from(this.querySelectorAll('c-tab'));
-        this.tabs = tabs.map((tab, idx) => ({ idx: idx, label: tab.label }));
-        Promise.resolve().then(() => {
-            let idx = this.tabs.findIndex((tab) => tab.label === this.activeTab);
-            idx = idx < 0 ? 0 : idx;
-            this.showtab(idx);
-        });
+        const slot = this.template.querySelector(`[data-id="slot"]`);
+        if (slot) {
+            let tabs = slot.assignedNodes();
+            this.tabs = tabs.map((tab, idx) => ({ idx: idx, label: tab.label }));
+            Promise.resolve().then(() => {
+                let idx = this.tabs.findIndex((tab) => tab.label === this.activeTab);
+                idx = idx < 0 ? 0 : idx;
+                this.showtab(idx);
+            });
+        }
     }
 
     onSwitchTab(event) {

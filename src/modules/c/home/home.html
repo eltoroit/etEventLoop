@@ -12,16 +12,24 @@
                     <lightning-layout-item class="slds-p-top_xx-large">
                         <c-tabset active-tab="Demo: Loops">
                             <c-tab label="Cover">
-                                <iframe src="/resources/simulator/simulator.html#/1" class="iframeSize">cover</iframe>
+                                <iframe src="/resources/simulator/simulator.html#/1" class="pageSize">cover</iframe>
                             </c-tab>
-                            <c-tab label="Powerpoint">Powerpoint</c-tab>
+                            <c-tab label="Powerpoint">
+                                <div class="pageSize">Powerpoint</div>
+                            </c-tab>
                             <c-tab label="Simulator">
-                                <iframe src="/resources/simulator/simulator.html?timer=1000#/2" class="iframeSize">Simulator</iframe>
+                                <iframe src="/resources/simulator/simulator.html?timer=1000#/2" class="pageSize">Simulator</iframe>
                             </c-tab>
                             <c-tab label="Demo: Loops">
-                                <c-demo-loops></c-demo-loops>
+                                <div class="pageSize">
+                                    <c-demo-loops></c-demo-loops>
+                                </div>
                             </c-tab>
-                            <c-tab label="Demos2"><button class="btn" onclick={onBtnClick}>Test</button></c-tab>
+                            <c-tab label="Demos2">
+                                <div class="pageSize">
+                                    <button class="btn" onclick={onBtnClick}>Test</button>
+                                </div>
+                            </c-tab>
                         </c-tabset>
                     </lightning-layout-item>
                 </lightning-layout>

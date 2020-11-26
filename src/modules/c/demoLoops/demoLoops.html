@@ -1,8 +1,39 @@
 <template>
-    <c-spinning-globe></c-spinning-globe>
-    <c-tabset variant="vertical">
-        <c-tab label="1">UNO</c-tab>
-        <c-tab label="2">DOS</c-tab>
-        <c-tab label="3">TRES</c-tab>
+    <!-- <c-spinning-globe></c-spinning-globe> -->
+    <div class="slds-is-relative">
+        <div class="slds-text-heading_large slds-p-bottom_x-large">Long runnning processes can block the execution.</div>
+        <div class="slds-text-heading_medium slds-p-bottom_x-large">
+            I want to simulate an operation that takes a long time to complete, I will simulate this using a loop that will be executed for few seconds. To make sure the user does not panic while
+            waiting, I will show a SLDS spinner.
+        </div>
+        <div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
+        <template if:true={showSpinner}>
+            <lightning-spinner variant="brand"></lightning-spinner>
+        </template>
+    </div>
+    <c-tabset variant="vertical" active-tab="While Loop">
+        <c-tab label="Test">
+            <c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
+            <c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
+        </c-tab>
+        <c-tab label="While Loop">
+            <div>
+                <c-button if:false={showSpinner} label="Start While Loop" onclick={onWhileLoop}></c-button>
+            </div>
+            <c-tabset active-tab="Notes">
+                <c-tab label="Code">
+                    <c-show-code path="loops/while.png"></c-show-code>
+                </c-tab>
+                <c-tab label="Notes">
+                    <c-show-notes>
+                        <li>The button remains clicked (red) during the execution of the loop</li>
+                        <li>Where is the spinner?</li>
+                    </c-show-notes>
+                </c-tab>
+            </c-tabset>
+        </c-tab>
+        <c-tab label="Timeout">DOS</c-tab>
+        <c-tab label="Promise">TRES</c-tab>
     </c-tabset>
+    <div class="slds-align_absolute-center slds-p-top_medium">Hint: Open the inspector tool and watch the event working</div>
 </template>
