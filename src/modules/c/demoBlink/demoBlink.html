@@ -4,7 +4,7 @@
             <div class="slds-p-vertical_large slds-p-right_large">
                 <div class="slds-text-heading_large slds-p-bottom_x-large">How To Blink?</div>
                 <div class="slds-text-heading_medium slds-p-bottom_x-large">
-                    I want to make this image blink, it should change the visibility every half second. The blinking starts and stops by clicking on a button.
+                    I want to make this image blink, it should change the visibility every half second. The blinking starts when the user clicks the button and will blink 10 times.
                 </div>
                 <div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
             </div>
@@ -37,8 +37,9 @@
                 </c-tab>
                 <c-tab label="Notes">
                     <c-show-notes>
-                        <li>The button remains clicked (red) during the execution of the loop</li>
-                        <li>Where is the spinner?</li>
+                        <li>The image does not blink!</li>
+                        <li>The counters fire first, and all at the same time</li>
+                        <li>One second later all the timers run</li>
                     </c-show-notes>
                 </c-tab>
             </c-tabset>
@@ -53,8 +54,7 @@
                 </c-tab>
                 <c-tab label="Notes">
                     <c-show-notes>
-                        <li>The button remains clicked (red) during the execution of the loop</li>
-                        <li>Where is the spinner?</li>
+                        <li>The image blinks correctly</li>
                     </c-show-notes>
                 </c-tab>
             </c-tabset>
