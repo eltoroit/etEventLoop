@@ -4,16 +4,16 @@
         "taskQueue": "+|(anonymous)"
     },
     {
-        "lineNumber": "7",
+        "lineNumber": "6",
         "stack": "+|(anonymous)",
         "taskQueue": "-|(anonymous)"
     },
     {
-        "lineNumber": "7",
+        "lineNumber": "6",
         "console": "+|Start"
     },
     {
-        "lineNumber": "8"
+        "lineNumber": "7"
     },
     {
         "lineNumber": "2",
@@ -27,11 +27,11 @@
         "lineNumber": "4"
     },
     {
-        "lineNumber": "9",
+        "lineNumber": "8",
         "stack": "-|echo('Hello Moon!')"
     },
     {
-        "lineNumber": "9",
+        "lineNumber": "8",
         "console": "+|Finish"
     },
     {

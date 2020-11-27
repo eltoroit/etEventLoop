@@ -1,8 +1,8 @@
-// prettier-ignore
-function timers(j) {
-	for (let i=0; i < j; i++) {
-		console.log(i);
-	}
+// prettier-ignore ... 12345678.1.2345678.2
+function timers(counter) {
+    for (let i = 0; i < counter; i++) {
+        console.log(counter);
+    }
 }
 
 console.log('Start');
