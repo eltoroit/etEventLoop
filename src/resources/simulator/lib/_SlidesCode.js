@@ -1,7 +1,7 @@
 class SlidesCode {
 	async initialize(Reveal) {
 		let data = await Reveal.initialize({
-			width: 1280,
+			width: 1645,
 			height: 720,
 			margin: 0.05,
 

@@ -4,7 +4,7 @@ var SLConfig = {
 		slug: "etjseventloop",
 		title: "JavaScript Event Loop Explained",
 		description: "",
-		width: 1280,
+		width: 1645,
 		height: 720,
 		margin: 0.05,
 		visibility: "all",
