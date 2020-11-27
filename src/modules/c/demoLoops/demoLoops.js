@@ -6,69 +6,69 @@ export default class DemoLoops extends LightningElement {
     loopPauseSeconds = 5;
 
     onWhileLoop() {
-        this._doSpinner(true);
-        let stop = this._logStart();
+        this.doSpinner(true);
+        let stop = this.logStart();
         while (Date.now() < stop) {
-            this._logAdd();
+            this.logAdd();
         }
-        this._logStop('whileTrue');
-        this._doSpinner(false);
+        this.logStop('whileTrue');
+        this.doSpinner(false);
     }
 
     onSetTimeoutLoop() {
-        this._doSpinner(true);
-        let stop = this._logStart();
+        this.doSpinner(true);
+        let stop = this.logStart();
         const loop = () => {
             if (Date.now() < stop) {
-                this._logAdd();
+                this.logAdd();
                 setTimeout(() => {
                     loop();
                 }, 0);
             } else {
-                this._logStop('setTimeoutLoop');
-                this._doSpinner(false);
+                this.logStop('setTimeoutLoop');
+                this.doSpinner(false);
             }
         };
         loop();
     }
 
     onPromiseLoop() {
-        this._doSpinner(true);
-        let stop = this._logStart();
+        this.doSpinner(true);
+        let stop = this.logStart();
         const loop = () => {
             if (Date.now() < stop) {
-                this._logAdd();
+                this.logAdd();
                 Promise.resolve().then(() => {
                     loop();
                 });
             } else {
-                this._logStop('promiseLoop');
-                this._doSpinner(false);
+                this.logStop('promiseLoop');
+                this.doSpinner(false);
             }
         };
         loop();
     }
 
     onShowSpinner() {
-        this._doSpinner(true);
+        this.doSpinner(true);
     }
 
     onHideSpinner() {
-        this._doSpinner(false);
+        this.doSpinner(false);
     }
 
-    _doSpinner(showSpinner) {
+    doSpinner(showSpinner) {
         this.showSpinner = showSpinner;
     }
 
-    _logStart() {
+    logStart() {
         this.log = {};
         let start = new Date();
         console.log(`Started at ${start.toJSON()}`);
         return start.setSeconds(start.getSeconds() + this.loopPauseSeconds);
     }
 
-    _logStop(msg) {
+    logStop(msg) {
         console.log(`Stopped at ${new Date().toJSON()}`);
         for (let [key, value] of Object.entries(this.log)) {
             this.log[key] = value.toLocaleString();
@@ -76,7 +76,7 @@ export default class DemoLoops extends LightningElement {
         console.log(msg, this.log);
     }
 
-    _logAdd() {
+    logAdd() {
         let now = new Date();
         // console.log(window.performance.now());
         if (this.log[now.getSeconds()]) {
