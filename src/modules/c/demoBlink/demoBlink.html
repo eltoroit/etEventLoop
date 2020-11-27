@@ -12,29 +12,28 @@
         <lightning-layout-item size="4" style="background-color: black; text-align: center">
             <div style="margin: 50px">
                 <!-- https://commons.wikimedia.org/wiki/File:Rotating_globe.gif -->
-                <img data-id="globe" src="/resources/demos/RotatingGlobe.gif" style="width: 50%" />
+                <img data-id="image" src="/resources/demos/RotatingGlobe.gif" style="width: 50%" />
             </div>
         </lightning-layout-item>
     </lightning-layout>
     <c-tabset variant="vertical" default-tab="Test">
         <c-tab label="Test">
-            <div>
-                <c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
-                <c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
-            </div>
+            <c-button label="Flip Image" onclick={onFlip}></c-button>&nbsp;
+            <c-button if:false={isVisible} label="Show Image" onclick={onShowImage}></c-button>
+            <c-button if:true={isVisible} label="Hide Image" onclick={onHideImage}></c-button>
             <c-tabset default-tab="Code">
                 <c-tab label="Code">
-                    <c-show-code path="loops/testLoop.png"></c-show-code>
+                    <c-show-code path="loops/loopTest.png"></c-show-code>
                 </c-tab>
             </c-tabset>
         </c-tab>
-        <c-tab label="While Loop">
+        <c-tab label="Version #1">
             <div>
-                <c-button label="Start While Loop" onclick={onWhileLoop}></c-button>
+                <c-button label="Version #1" onclick={onVersion1}></c-button>
             </div>
             <c-tabset default-tab="Code">
                 <c-tab label="Code">
-                    <c-show-code path="loops/whileLoop.png"></c-show-code>
+                    <c-show-code path="loops/loopWhile.png"></c-show-code>
                 </c-tab>
                 <c-tab label="Notes">
                     <c-show-notes>
@@ -50,7 +49,7 @@
             </div>
             <c-tabset default-tab="Code">
                 <c-tab label="Code">
-                    <c-show-code path="loops/promiseLoop.png"></c-show-code>
+                    <c-show-code path="loops/loopPromise.png"></c-show-code>
                 </c-tab>
                 <c-tab label="Notes">
                     <c-show-notes>
@@ -66,7 +65,7 @@
             </div>
             <c-tabset default-tab="Code">
                 <c-tab label="Code">
-                    <c-show-code path="loops/setTimeoutLoop.png"></c-show-code>
+                    <c-show-code path="loops/loopSetTimeout.png"></c-show-code>
                 </c-tab>
                 <c-tab label="Notes">
                     <c-show-notes>
