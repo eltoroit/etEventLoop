@@ -19,8 +19,7 @@ export default class DemoBlink extends LightningElement {
 
     onVersion1() {
         this.logStart();
-        while (this.counter < this.maxTimes) {
-            this.increaseCounter();
+        while (this.increaseCounter()) {
             setTimeout(() => {
                 this.flipImage();
             }, 500);
@@ -30,9 +29,9 @@ export default class DemoBlink extends LightningElement {
     onVersion2() {
         this.logStart();
         const loop = () => {
-            this.increaseCounter();
             setTimeout(() => {
-                if (this.flipImage()) {
+                if (this.increaseCounter()) {
+                    this.flipImage();
                     loop();
                 }
             }, 500);
@@ -43,7 +42,6 @@ export default class DemoBlink extends LightningElement {
     flipImage() {
         this.updateUI(!this.isVisible);
         console.log(`${this.isVisible ? 'ON' : 'OFF'} @ ${this.getDTTM()}`);
-        return this.counter < this.maxTimes;
     }
 
     updateUI(isVisible) {
@@ -55,6 +53,7 @@ export default class DemoBlink extends LightningElement {
     increaseCounter() {
         this.counter++;
         console.log(`Counter: ${this.counter} @ ${this.getDTTM()}`);
+        return this.counter < this.maxTimes;
     }
 
     logStart() {
