@@ -1,56 +1,64 @@
 [
-	{
-		"lineNumber": "12",
-		"stack": "+|(anonymous)",
-		"console": "+|1"
-	},
-	{
-		"lineNumber": "13"
-	},
-	{
-		"lineNumber": "2",
-		"stack": "+|timer(0)"
-	},
-	{
-		"lineNumber": "3",
-		"console": "+|2"
-	},
-	{
-		"lineNumber": "4-8",
-		"webAPI": "+|0ms => function(){...}"
-	},
-	{
-		"lineNumber": "9",
-		"console": "+|4"
-	},
-	{
-		"lineNumber": "9",
-		"webAPI": "-|0ms => function(){...}",
-		"taskQueue": "+|function(){...}"
-	},
-	{
-		"lineNumber": "10",
-		"stack": "-|timer(0)"
-	},
-	{
-		"lineNumber": "14",
-		"console": "+|Done"
-	},
-	{
-		"lineNumber": "1",
-		"stack": "-|(anonymous)"
-	},
-	{
-		"lineNumber": "5-7",
-		"taskQueue": "-|function(){...}",
-		"stack": "+|function(){...}"
-	},
-	{
-		"lineNumber": "6",
-		"console": "+|3"
-	},
-	{
-		"lineNumber": "7",
-		"stack": "-|function(){...}"
-	}
+    {
+        "lineNumber": "0",
+        "taskQueue": "+|(anonymous)"
+    },
+    {
+        "lineNumber": "13",
+        "stack": "+|(anonymous)",
+        "taskQueue": "-|(anonymous)"
+    },
+    {
+        "lineNumber": "13",
+        "console": "+|Start"
+    },
+    {
+        "lineNumber": "14"
+    },
+    {
+        "lineNumber": "2",
+        "stack": "+|timer(0)"
+    },
+    {
+        "lineNumber": "3",
+        "console": "+|Delay: 0ms"
+    },
+    {
+        "lineNumber": "4-9",
+        "webAPI": "+|🕒 0ms #5 ()=>{...}"
+    },
+    {
+        "lineNumber": "10",
+        "console": "+|Returning"
+    },
+    {
+        "lineNumber": "10",
+        "webAPI": "-|🕒 0ms #5 ()=>{...}",
+        "taskQueue": "+|#5 ()=>{...}"
+    },
+    {
+        "lineNumber": "15",
+        "stack": "-|timer(0)"
+    },
+    {
+        "lineNumber": "15",
+        "console": "+|Done"
+    },
+    {
+        "lineNumber": "0",
+        "stack": "-|(anonymous)"
+    },
+    {
+        "lineNumber": "5-7",
+        "taskQueue": "-|#5 ()=>{...}",
+        "stack": "+|#5 ()=>{...}"
+    },
+    {
+        "lineNumber": "6",
+        "console": "+|Timed out"
+    },
+    {
+        "lineNumber": "0",
+        "stack": "-|#5 ()=>{...}"
+    }
 ]

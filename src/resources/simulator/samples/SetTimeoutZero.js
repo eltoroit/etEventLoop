@@ -1,14 +1,15 @@
 // prettier-ignore
 function timer(delay) {
-	console.log("2");
-	setTimeout(
-		function () {
-			console.log("3");
-		},
-		delay);
-	console.log("4");
+    console.log(`Delay: ${delay}ms`);
+    setTimeout(
+        () => {
+            console.log('Timed out');
+        },
+        delay
+    );
+    console.log('Returning');
 }
 
-console.log("1");
+console.log('Start');
 timer(0);
-console.log("Done");
+console.log('Done');

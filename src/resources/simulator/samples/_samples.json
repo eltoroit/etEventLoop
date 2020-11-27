@@ -1,48 +1,48 @@
 {
-    "slide": {
-        "indexh": 1,
-        "indexv": 0
+  "slide": {
+    "indexh": 1,
+    "indexv": 0
+  },
+  "sampleSteps": {
+    "lineNumber": "#",
+    "stack": "+|MESSAGE",
+    "webAPI": "+|MESSAGE",
+    "taskQueue": "+|MESSAGE",
+    "microtaskQueue": "+|MESSAGE",
+    "console": "+|MESSAGE"
+  },
+  "demos": [
+    {
+      "name": "Demo: Basic calls (Understand UI)",
+      "code": "DemoBasicCalls"
     },
-    "sampleSteps": {
-        "lineNumber": "#",
-        "stack": "+|MESSAGE",
-        "webAPI": "+|MESSAGE",
-        "taskQueue": "+|MESSAGE",
-        "microtaskQueue": "+|MESSAGE",
-        "console": "+|MESSAGE"
+    {
+      "name": "Demo: Multiple Timers",
+      "code": "DemoMultipleTimers"
     },
-    "demos": [
-        {
-            "name": "Demo: Basic calls (Understand UI)",
-            "code": "DemoBasicCalls"
-        },
-        {
-            "name": "Demo: Wait 0ms",
-            "code": "DemoSetTimeoutZero"
-        },
-        {
-            "name": "Demo: Multiple Timers",
-            "code": "DemoMultipleTimers"
-        },
-        {
-            "name": "Basic calls (Synchronous)",
-            "code": "BasicCalls"
-        },
-        {
-            "name": "Simple Timer",
-            "code": "SetTimeout"
-        },
-        {
-            "name": "Wait Zero milliseconds",
-            "code": "SetTimeoutZero"
-        },
-        {
-            "name": "TEST: Fill the boxes",
-            "code": "TestApp"
-        },
-        {
-            "name": "TEST: Long (scrolls)",
-            "code": "TestHelloWorld"
-        }
-    ]
+    {
+      "name": "Demo: Promises",
+      "code": "DemoPromises"
+    },
+    {
+      "name": "Wait Zero milliseconds",
+      "code": "SetTimeoutZero"
+    },
+    {
+      "name": "Chaining Methods",
+      "code": "MethodsChained"
+    },
+    {
+      "name": "Simple Timer",
+      "code": "SetTimeout"
+    },
+    {
+      "name": "TEST: Fill the boxes",
+      "code": "TestApp"
+    },
+    {
+      "name": "TEST: Long (scrolls)",
+      "code": "TestHelloWorld"
+    }
+  ]
 }
