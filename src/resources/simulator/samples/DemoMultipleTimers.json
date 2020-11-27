@@ -1,0 +1,41 @@
+[
+    {
+        "lineNumber": "0",
+        "taskQueue": "+|(anonymous)"
+    },
+    {
+        "lineNumber": "7",
+        "stack": "+|(anonymous)",
+        "taskQueue": "-|(anonymous)"
+    },
+    {
+        "lineNumber": "8",
+        "console": "+|Start"
+    },
+    {
+        "lineNumber": "8"
+    },
+    {
+        "lineNumber": "2",
+        "stack": "+|echo('Hello Moon!')"
+    },
+    {
+        "lineNumber": "3",
+        "console": "+|Hello Moon!"
+    },
+    {
+        "lineNumber": "4"
+    },
+    {
+        "lineNumber": "9",
+        "stack": "-|echo('Hello Moon!')"
+    },
+    {
+        "lineNumber": "9",
+        "console": "+|Finish"
+    },
+    {
+        "lineNumber": "0",
+        "stack": "-|(anonymous)"
+    }
+]

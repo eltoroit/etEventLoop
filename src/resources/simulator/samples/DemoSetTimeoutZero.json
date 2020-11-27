@@ -1,0 +1,64 @@
+[
+    {
+        "lineNumber": "0",
+        "taskQueue": "+|(anonymous)"
+    },
+    {
+        "lineNumber": "12",
+        "stack": "+|(anonymous)",
+        "taskQueue": "-|(anonymous)"
+    },
+    {
+        "lineNumber": "12",
+        "console": "+|1"
+    },
+    {
+        "lineNumber": "13"
+    },
+    {
+        "lineNumber": "2",
+        "stack": "+|timer(0)"
+    },
+    {
+        "lineNumber": "3",
+        "console": "+|2"
+    },
+    {
+        "lineNumber": "4-8",
+        "webAPI": "+|🕒 0ms #5 ()=>{}"
+    },
+    {
+        "lineNumber": "9",
+        "console": "+|4"
+    },
+    {
+        "lineNumber": "9",
+        "webAPI": "-|🕒 0ms #5 ()=>{}",
+        "taskQueue": "+|#5 ()=>{}"
+    },
+    {
+        "lineNumber": "14",
+        "stack": "-|timer(0)"
+    },
+    {
+        "lineNumber": "14",
+        "console": "+|Done"
+    },
+    {
+        "lineNumber": "0",
+        "stack": "-|(anonymous)"
+    },
+    {
+        "lineNumber": "5-7",
+        "taskQueue": "-|#5 ()=>{}",
+        "stack": "+|#5 ()=>{}"
+    },
+    {
+        "lineNumber": "6",
+        "console": "+|3"
+    },
+    {
+        "lineNumber": "0",
+        "stack": "-|#5 ()=>{}"
+    }
+]
