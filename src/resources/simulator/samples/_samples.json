@@ -11,6 +11,10 @@
     "microtaskQueue": "+|MESSAGE",
     "console": "+|MESSAGE"
   },
+  "config": {
+    "delay": 50,
+    "autoNext": true
+  },
   "demos": [
     {
       "name": "Demo: Basic calls (Understand UI)",

@@ -65,9 +65,7 @@ class Box extends Base {
   }
 
   removeLine(text) {
-    this.lines = this.lines.filter(
-      (line) => line !== `${this.hasDash ? '- ' : ''}${text}`
-    );
+    this.lines = this.lines.filter((line) => line !== `${this.hasDash ? '- ' : ''}${text}`);
     this.updateCmp(false);
   }
 
@@ -92,44 +90,49 @@ class Box extends Base {
     // }, 500);
   }
 
-  getStep(previousStep, currentStep, isNext, box) {
+  getStep(previousStep, currentStep, isNext, box, navigator) {
     let instruction = null;
     let step = isNext ? currentStep : previousStep;
+    if (step) {
+      if (step.TIMER === 'ON') {
+        navigator.onStartTimer(step.index);
+      }
+      if (step.TIMER === 'OFF') {
+        navigator.onStopTimer(step.index);
+      }
+      if (step.PAUSE) {
+        debugger;
+      }
+    }
     if (step && step[box]) {
       instruction = this.splitInstruction(step[box]);
     }
     return instruction;
   }
 
-  processStep(previousStep, currentStep, isNext) {
+  processStep(previousStep, currentStep, isNext, navigator) {
     // They may be arrays...
-    if (isNext && Array.isArray(currentStep[this.boxName])) {
+    if (isNext && currentStep && Array.isArray(currentStep[this.boxName])) {
       let steps = currentStep[this.boxName];
       steps.forEach((step) => {
         let cloned = { ...currentStep };
         cloned[this.boxName] = step;
-        this.processStep(previousStep, cloned, isNext);
+        this.processStep(previousStep, cloned, isNext, navigator);
       });
       return;
     }
-    if (!isNext && Array.isArray(previousStep[this.boxName])) {
+    if (!isNext && previousStep && Array.isArray(previousStep[this.boxName])) {
       let steps = previousStep[this.boxName];
       steps.forEach((step) => {
         let cloned = { ...previousStep };
         cloned[this.boxName] = step;
-        this.processStep(cloned, currentStep, isNext);
+        this.processStep(cloned, currentStep, isNext, navigator);
       });
       return;
     }
 
-    // debugger;
     this.cmp.style.backgroundColor = '#fff';
-    let instruction = this.getStep(
-      previousStep,
-      currentStep,
-      isNext,
-      this.boxName
-    );
+    let instruction = this.getStep(previousStep, currentStep, isNext, this.boxName, navigator);
     if (instruction) {
       if (isNext) {
         if (instruction[0] === '+') {
@@ -187,8 +190,7 @@ export class Code extends Box {
       this.deleteChildren();
       let htmlCode = document.createElement('code');
       htmlCode.innerHTML = this.code;
-      htmlCode.dataset.lineNumbers =
-        `1-${this.code.split('\n').length}` + demo.lines;
+      htmlCode.dataset.lineNumbers = `1-${this.code.split('\n').length}` + demo.lines;
       // htmlCode.dataset.lineNumbers = `1` + demo.lines;
       htmlCode.dataset.fragmentIndex = '0';
       this.cmp.appendChild(htmlCode);
