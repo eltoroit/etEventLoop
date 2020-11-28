@@ -8,21 +8,23 @@ function myTimer(cb) {
 function myPromise() {
   return new Promise((res, rej) => {
     let quality = Math.random();
-    Promise.resolve().then(() => {
-      console.log('Checking Quality');
-      if (quality > 0.1) {
-        res(quality);
-      } else {
-        rej(quality);
-      }
-    });
-    console.log('After Promise');
+    Promise.resolve()
+      .then(() => {
+        log('Checking Quality');
+        if (quality > 0.1) {
+          res(quality);
+        } else {
+          rej(quality);
+        }
+      });
+    log('After Promise');
   });
 }
-console.log('Start');
+log('Start');
 myTimer((q) => { log(`C: ${q}`); });
+log('After timer');
 myPromise()
   .then((q) => { log(`T: ${q}`); })
   .catch((err) => { log(`C: ${err}`); })
   .finally(() => { log('Finally'); });
-console.log('Finish');
+log('Finish');

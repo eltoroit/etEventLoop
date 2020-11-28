@@ -1,37 +1,89 @@
 [
   {
+    "DEBUG": "Start...",
     "lineNumber": "0",
     "taskQueue": "+|(anonymous)"
   },
   {
-    "lineNumber": "22",
+    "lineNumber": "23",
     "stack": "+|(anonymous)",
     "taskQueue": "-|(anonymous)"
   },
   {
-    "lineNumber": "22",
+    "lineNumber": "2"
+  },
+  {
+    "lineNumber": "2",
     "console": "+|Start"
   },
   {
-    "lineNumber": "23"
+    "lineNumber": "24"
   },
   {
+    "DEBUG": "CALL myTimer...",
     "lineNumber": "3",
-    "stack": "+|time('Hello Moon!')"
+    "stack": "+|myTimer(cb)"
   },
   {
-    "lineNumber": "3",
-    "console": "+|Hello Moon!"
+    "lineNumber": "4-6",
+    "webAPI": "+|🕒 0ms #4-6"
   },
   {
-    "lineNumber": "4"
+    "lineNumber": "7"
   },
   {
-    "lineNumber": "9",
-    "stack": "-|echo('Hello Moon!')"
+    "lineNumber": "25",
+    "stack": "-|myTimer(cb)"
   },
   {
-    "lineNumber": "9",
+    "lineNumber": "25",
+    "webAPI": "-|🕒 0ms #4-6",
+    "taskQueue": "+|#4-6"
+  },
+  {
+    "lineNumber": "2",
+    "console": "+|After timer"
+  },
+  {
+    "lineNumber": "26-29",
+    "webAPI": "+|🤔 #26-29"
+  },
+  {
+    "DEBUG": "CALL myPromise...",
+    "lineNumber": "8",
+    "stack": "+|myPromise()"
+  },
+  {
+    "lineNumber": "9"
+  },
+  {
+    "lineNumber": "10"
+  },
+  {
+    "lineNumber": "11-19",
+    "webAPI": "+|🤔 #11-19"
+  },
+  {
+    "lineNumber": "20"
+  },
+  {
+    "lineNumber": "2",
+    "console": "+|After Promise"
+  },
+  {
+    "lineNumber": "21",
+    "webAPI": "-|🤔 #11-19",
+    "microtaskQueue": "+|#11-19"
+  },
+  {
+    "lineNumber": "22"
+  },
+  {
+    "lineNumber": "30",
+    "stack": "-|myPromise()"
+  },
+  {
+    "lineNumber": "2",
     "console": "+|Finish"
   },
   {
