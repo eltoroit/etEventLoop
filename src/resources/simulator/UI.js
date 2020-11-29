@@ -190,7 +190,8 @@ export class Code extends Box {
       this.deleteChildren();
       let htmlCode = document.createElement('code');
       htmlCode.innerHTML = this.code;
-      htmlCode.dataset.lineNumbers = `1-${this.code.split('\n').length}` + demo.lines;
+      htmlCode.dataset.lineNumbers = `0` + demo.lines;
+      // htmlCode.dataset.lineNumbers = `1-${this.code.split('\n').length}` + demo.lines;
       // htmlCode.dataset.lineNumbers = `1` + demo.lines;
       htmlCode.dataset.fragmentIndex = '0';
       this.cmp.appendChild(htmlCode);
