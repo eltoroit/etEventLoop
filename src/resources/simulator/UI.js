@@ -94,10 +94,10 @@ class Box extends Base {
     let instruction = null;
     let step = isNext ? currentStep : previousStep;
     if (step) {
-      if (step.TIMER === 'ON') {
+      if (step.TIMER === 'ON' && isNext) {
         navigator.onStartTimer(step.index);
       }
-      if (step.TIMER === 'OFF') {
+      if (step.TIMER === 'OFF' && isNext) {
         navigator.onStopTimer(step.index);
       }
       if (step.PAUSE) {

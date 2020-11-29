@@ -1,93 +1,284 @@
 [
+  { "DEBUG": "START - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
   {
-    "DEBUG": "Start...",
     "lineNumber": "0",
     "taskQueue": "+|(anonymous)"
   },
   {
-    "lineNumber": "23",
+    "lineNumber": "25",
     "stack": "+|(anonymous)",
     "taskQueue": "-|(anonymous)"
   },
   {
-    "lineNumber": "2"
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('Start')"
   },
   {
     "lineNumber": "2",
     "console": "+|Start"
   },
   {
-    "lineNumber": "24"
+    "lineNumber": "3"
   },
   {
-    "DEBUG": "CALL myTimer...",
-    "lineNumber": "3",
+    "lineNumber": "26",
+    "stack": "-|log('Start')"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  { "DEBUG": "CALL myTimer - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+  {
+    "lineNumber": "4",
     "stack": "+|myTimer(cb)"
   },
   {
-    "lineNumber": "4-6",
-    "webAPI": "+|🕒 0ms #4-6"
+    "lineNumber": "5-7",
+    "webAPI": "+|🕒 0ms #5-7"
   },
   {
-    "lineNumber": "7"
+    "lineNumber": "5-7",
+    "webAPI": "-|🕒 0ms #5-7",
+    "taskQueue": "+|#5-7"
   },
   {
-    "lineNumber": "25",
-    "stack": "-|myTimer(cb)"
+    "lineNumber": "8"
   },
   {
-    "lineNumber": "25",
-    "webAPI": "-|🕒 0ms #4-6",
-    "taskQueue": "+|#4-6"
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('After timer')"
   },
   {
     "lineNumber": "2",
     "console": "+|After timer"
   },
   {
-    "lineNumber": "26-29",
-    "webAPI": "+|🤔 #26-29"
+    "lineNumber": "3"
   },
   {
-    "DEBUG": "CALL myPromise...",
-    "lineNumber": "8",
+    "lineNumber": "9",
+    "stack": "-|log('After timer')"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  {
+    "lineNumber": "27",
+    "stack": "-|myTimer(cb)"
+  },
+  {
+    "DEBUG": "CALL myPromise - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+  },
+  {
+    "lineNumber": "10",
     "stack": "+|myPromise()"
   },
   {
-    "lineNumber": "9"
+    "lineNumber": "11"
   },
   {
-    "lineNumber": "10"
+    "lineNumber": "12"
   },
   {
-    "lineNumber": "11-19",
-    "webAPI": "+|🤔 #11-19"
+    "lineNumber": "13"
   },
   {
-    "lineNumber": "20"
+    "lineNumber": "14-21",
+    "webAPI": "+|🤔 #14-21"
+  },
+  {
+    "lineNumber": "14-21",
+    "webAPI": "-|🤔 #14-21",
+    "microtaskQueue": "+|#14-21"
+  },
+  {
+    "lineNumber": "22"
+  },
+  {
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('After Promise')"
   },
   {
     "lineNumber": "2",
     "console": "+|After Promise"
   },
   {
-    "lineNumber": "21",
-    "webAPI": "-|🤔 #11-19",
-    "microtaskQueue": "+|#11-19"
+    "lineNumber": "3"
   },
   {
-    "lineNumber": "22"
+    "lineNumber": "23",
+    "stack": "-|log('After Promise')"
   },
   {
-    "lineNumber": "30",
+    "TIMER": "OFF"
+  },
+  {
+    "lineNumber": "24"
+  },
+  {
+    "lineNumber": "27",
     "stack": "-|myPromise()"
+  },
+  {
+    "lineNumber": "28-29",
+    "webAPI": "+|🤔 #28-29"
+  },
+  {
+    "lineNumber": "30"
+  },
+  {
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('Finish')"
   },
   {
     "lineNumber": "2",
     "console": "+|Finish"
   },
   {
+    "lineNumber": "3"
+  },
+  {
+    "lineNumber": "30",
+    "stack": "-|log('Finish')"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  {
     "lineNumber": "0",
     "stack": "-|(anonymous)"
+  },
+
+  {
+    "DEBUG": "EXECUTE Microtask #1 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+  },
+  {
+    "lineNumber": "14-21",
+    "microtaskQueue": "-|#14-21",
+    "stack": "+|#14-21"
+  },
+  {
+    "lineNumber": "15"
+  },
+  {
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('Checking Quality')"
+  },
+  {
+    "lineNumber": "2",
+    "console": "+|Checking Quality"
+  },
+  {
+    "lineNumber": "3"
+  },
+  {
+    "lineNumber": "16",
+    "stack": "-|log('Checking Quality')"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  {
+    "lineNumber": "19",
+    "webAPI": "-|🤔 #28-29",
+    "microtaskQueue": "+|#29 ❌: 0.0123"
+  },
+  {
+    "lineNumber": "0",
+    "stack": "-|#14-21"
+  },
+
+  {
+    "DEBUG": "EXECUTE Microtask #2 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+  },
+  {
+    "lineNumber": "29",
+    "microtaskQueue": "-|#29 ❌: 0.0123",
+    "stack": "+|#29 (err = 0.0123)"
+  },
+  {
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('❌: 0.0123')"
+  },
+  {
+    "lineNumber": "2",
+    "console": "+|❌: 0.0123"
+  },
+  {
+    "lineNumber": "3"
+  },
+  {
+    "lineNumber": "29",
+    "stack": "-|log('❌: 0.0123')"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  {
+    "lineNumber": "0",
+    "stack": "-|#29 (err = 0.0123)"
+  },
+
+  {
+    "DEBUG": "EXECUTE Timer - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+  },
+  {
+    "lineNumber": "5-7",
+    "taskQueue": "-|#5-7",
+    "stack": "+|#5-7"
+  },
+  {
+    "lineNumber": "6"
+  },
+  {
+    "lineNumber": "26",
+    "stack": "+|cb(0.98765)"
+  },
+  {
+    "TIMER": "ON"
+  },
+  {
+    "lineNumber": "1",
+    "stack": "+|log('TIMER: 0.98765')"
+  },
+  {
+    "lineNumber": "2",
+    "console": "+|TIMER: 0.98765"
+  },
+  {
+    "lineNumber": "3"
+  },
+  {
+    "lineNumber": "26",
+    "stack": "-|log('TIMER: 0.98765')"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  {
+    "lineNumber": "6",
+    "stack": "-|cb(0.98765)"
+  },
+  {
+    "lineNumber": "0",
+    "stack": "-|#5-7"
   }
 ]

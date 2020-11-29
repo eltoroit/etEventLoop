@@ -1,41 +1,41 @@
 [
-    {
-        "lineNumber": "0",
-        "taskQueue": "+|(anonymous)"
-    },
-    {
-        "lineNumber": "6",
-        "stack": "+|(anonymous)",
-        "taskQueue": "-|(anonymous)"
-    },
-    {
-        "lineNumber": "6",
-        "console": "+|Start"
-    },
-    {
-        "lineNumber": "7"
-    },
-    {
-        "lineNumber": "2",
-        "stack": "+|echo('Hello Moon!')"
-    },
-    {
-        "lineNumber": "3",
-        "console": "+|Hello Moon!"
-    },
-    {
-        "lineNumber": "4"
-    },
-    {
-        "lineNumber": "8",
-        "stack": "-|echo('Hello Moon!')"
-    },
-    {
-        "lineNumber": "8",
-        "console": "+|Finish"
-    },
-    {
-        "lineNumber": "0",
-        "stack": "-|(anonymous)"
-    }
+  {
+    "lineNumber": "0",
+    "taskQueue": "+|(anonymous)"
+  },
+  {
+    "lineNumber": "6",
+    "stack": "+|(anonymous)",
+    "taskQueue": "-|(anonymous)"
+  },
+  {
+    "lineNumber": "6",
+    "console": "+|Start"
+  },
+  {
+    "lineNumber": "7"
+  },
+  {
+    "lineNumber": "2",
+    "stack": "+|echo('Hello Moon!')"
+  },
+  {
+    "lineNumber": "3",
+    "console": "+|Hello Moon!"
+  },
+  {
+    "lineNumber": "4"
+  },
+  {
+    "lineNumber": "8",
+    "stack": "-|echo('Hello Moon!')"
+  },
+  {
+    "lineNumber": "8",
+    "console": "+|Finish"
+  },
+  {
+    "lineNumber": "0",
+    "stack": "-|(anonymous)"
+  }
 ]

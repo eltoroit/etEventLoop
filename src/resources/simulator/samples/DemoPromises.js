@@ -1,13 +1,15 @@
-// prettier-ignore
-function log(msg) { console.log(msg); }
+function log(msg) {
+	console.log(msg);
+}
 function myTimer(cb) {
   setTimeout(() => {
-    cb(Math.random());
+    cb(0.98765);
   }, 0);
+  log('After timer');
 }
 function myPromise() {
   return new Promise((res, rej) => {
-    let quality = Math.random();
+    let quality = 0.01234;
     Promise.resolve()
       .then(() => {
         log('Checking Quality');
@@ -21,10 +23,8 @@ function myPromise() {
   });
 }
 log('Start');
-myTimer((q) => { log(`C: ${q}`); });
-log('After timer');
+myTimer((q) => { log(`TIMER: ${q}`); });
 myPromise()
-  .then((q) => { log(`T: ${q}`); })
-  .catch((err) => { log(`C: ${err}`); })
-  .finally(() => { log('Finally'); });
+  .then((q) => { log(`✅: ${q}`); })
+  .catch((err) => {log(`❌: ${err}`);});
 log('Finish');

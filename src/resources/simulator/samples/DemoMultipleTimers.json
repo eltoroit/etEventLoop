@@ -28,12 +28,14 @@
   },
   {
     "lineNumber": "5-8",
-    "webAPI": "+|🕒 1000ms #6 (0)=>{...}"
+    "webAPI": "+|🕒 1000ms #6-8 (j = 0)"
   },
   {
     "lineNumber": "9"
   },
-
+  {
+    "TIMER": "ON"
+  },
   {
     "lineNumber": "3"
   },
@@ -43,12 +45,11 @@
   },
   {
     "lineNumber": "5-8",
-    "webAPI": "+|🕒 1000ms #6 (1)=>{...}"
+    "webAPI": "+|🕒 1000ms #6-8 (j = 1)"
   },
   {
     "lineNumber": "9"
   },
-
   {
     "lineNumber": "3"
   },
@@ -58,18 +59,23 @@
   },
   {
     "lineNumber": "5-8",
-    "webAPI": "+|🕒 1000ms #6 (1)=>{...}"
+    "webAPI": "+|🕒 1000ms #6-8 (j = 2)"
   },
   {
     "lineNumber": "9"
   },
-
   {
     "lineNumber": "3"
   },
   {
     "lineNumber": "10",
     "console": "+|Loops Ended"
+  },
+  {
+    "TIMER": "OFF"
+  },
+  {
+    "lineNumber": "11"
   },
   {
     "lineNumber": "15",
@@ -88,17 +94,16 @@
   },
   {
     "lineNumber": "0",
-    "webAPI": [
-      "-|🕒 1000ms #6 (0)=>{...}",
-      "-|🕒 1000ms #6 (1)=>{...}",
-      "-|🕒 1000ms #6 (2)=>{...}"
-    ],
-    "taskQueue": ["+|#6 (0)=>{...}", "+|#6 (1)=>{...}", "+|#6 (2)=>{...}"]
+    "webAPI": ["-|🕒 1000ms #6-8 (j = 0)", "-|🕒 1000ms #6-8 (j = 1)", "-|🕒 1000ms #6-8 (j = 2)"],
+    "taskQueue": ["+|#6-8 (j = 0)", "+|#6-8 (j = 1)", "+|#6-8 (j = 2)"]
+  },
+  {
+    "TIMER": "ON"
   },
   {
     "lineNumber": "6-8",
-    "taskQueue": "-|#6 (0)=>{...}",
-    "stack": "+|#6 (0)=>{...}"
+    "taskQueue": "-|#6-8 (j = 0)",
+    "stack": "+|#6-8 (j = 0)"
   },
   {
     "lineNumber": "7",
@@ -106,12 +111,12 @@
   },
   {
     "lineNumber": "0",
-    "stack": "-|#6 (0)=>{...}"
+    "stack": "-|#6-8 (j = 0)"
   },
   {
     "lineNumber": "6-8",
-    "taskQueue": "-|#6 (1)=>{...}",
-    "stack": "+|#6 (1)=>{...}"
+    "taskQueue": "-|#6-8 (j = 1)",
+    "stack": "+|#6-8 (j = 1)"
   },
   {
     "lineNumber": "7",
@@ -119,12 +124,12 @@
   },
   {
     "lineNumber": "0",
-    "stack": "-|#6 (1)=>{...}"
+    "stack": "-|#6-8 (j = 1)"
   },
   {
     "lineNumber": "6-8",
-    "taskQueue": "-|#6 (2)=>{...}",
-    "stack": "+|#6 (2)=>{...}"
+    "taskQueue": "-|#6-8 (j = 2)",
+    "stack": "+|#6-8 (j = 2)"
   },
   {
     "lineNumber": "7",
@@ -132,9 +137,12 @@
   },
   {
     "lineNumber": "0",
-    "stack": "-|#6 (2)=>{...}"
+    "stack": "-|#6-8 (j = 2)"
   },
   {
     "lineNumber": "0"
+  },
+  {
+    "TIMER": "OFF"
   }
 ]

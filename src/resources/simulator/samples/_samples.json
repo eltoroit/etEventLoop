@@ -3,6 +3,20 @@
     "indexh": 1,
     "indexv": 0
   },
+  "Special Lines": [
+    {
+      "PAUSE": true
+    },
+    {
+      "TIMER": "ON"
+    },
+    {
+      "TIMER": "OFF"
+    },
+    {
+      "DEBUG": "CALL myTimer - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    }
+  ],
   "sampleSteps": {
     "lineNumber": "#",
     "stack": "+|MESSAGE",
@@ -12,7 +26,7 @@
     "console": "+|MESSAGE"
   },
   "config": {
-    "delay": 50,
+    "delay": 500,
     "autoNext": true
   },
   "demos": [
