@@ -1,50 +1,70 @@
 <template>
-    <div class="slds-p-around_xx-large">
-        <lightning-layout horizontal-align="spread" multiple-rows>
-            <lightning-layout-item size="12">
-                <div class="slds-text-heading_large slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
-            </lightning-layout-item>
-            <lightning-layout-item size="12">
-                <div class="slds-text-heading_small slds-align_absolute-center">By @ELTOROIT</div>
-                <div class="slds-p-bottom_large">&nbsp;</div>
-            </lightning-layout-item>
-            <lightning-layout-item size="12">
-                <div style="background-color: white">
-                    <c-tabset default-tab="Simulator" style="width: 100%; display: inline-block">
-                        <c-tab label="Who Am I?">
-                            <div class="slds-align_absolute-center pageSize" style="background-color: white">
-                                <img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
-                            </div>
-                        </c-tab>
-                        <c-tab label="Recording">
-                            <div class="slds-align_absolute-center pageSize" style="background-color: black">
-                                <div style="color: white">Recording</div>
-                            </div>
-                        </c-tab>
-                        <c-tab label="Powerpoint">
-                            <div class="slds-align_absolute-center pageSize" style="background-color: black">
-                                <div style="color: white">Powerpoint</div>
-                            </div>
-                        </c-tab>
-                        <c-tab label="Simulator">
-                            <iframe src="/resources/simulator/simulator.html?timer=500#/2" class="pageSize">Simulator</iframe>
-                        </c-tab>
-                        <c-tab label="Demo: Blink">
-                            <div class="pageSize">
-                                <c-demo-blink></c-demo-blink>
-                            </div>
-                        </c-tab>
-                        <c-tab label="Demo: Loops">
-                            <div class="pageSize">
-                                <c-demo-loops></c-demo-loops>
-                            </div>
-                        </c-tab>
-                    </c-tabset>
+  <div class="slds-p-around_xx-large">
+    <lightning-layout horizontal-align="spread" multiple-rows>
+      <lightning-layout-item size="12">
+        <div class="slds-text-heading_large slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
+      </lightning-layout-item>
+      <lightning-layout-item size="12">
+        <div class="slds-text-heading_small slds-align_absolute-center">By @ELTOROIT</div>
+        <div class="slds-p-bottom_large">&nbsp;</div>
+      </lightning-layout-item>
+      <lightning-layout-item size="12">
+        <div style="background-color: white">
+          <c-tabset default-tab="Simulator" style="width: 100%; display: inline-block">
+            <c-tab label="Who Am I?">
+              <div class="slds-align_absolute-center pageSize" style="background-color: white">
+                <img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
+              </div>
+            </c-tab>
+            <c-tab label="Recording">
+              <div class="slds-align_absolute-center pageSize" style="background-color: black">
+                <div style="color: white">Recording</div>
+              </div>
+            </c-tab>
+            <c-tab label="Powerpoint">
+              <div class="slds-align_absolute-center pageSize" style="background-color: black">
+                <div style="color: white">Powerpoint</div>
+              </div>
+            </c-tab>
+            <c-tab label="Simulator">
+              <iframe src="/resources/simulator/simulator.html?timer=500#/2" class="pageSize">Simulator</iframe>
+            </c-tab>
+            <c-tab label="Demo: Blink">
+              <div class="pageSize">
+                <c-demo-blink></c-demo-blink>
+              </div>
+            </c-tab>
+            <c-tab label="Demo: Loops">
+              <div class="pageSize">
+                <c-demo-loops></c-demo-loops>
+              </div>
+            </c-tab>
+            <c-tab label="Algorithm">
+              <div class="slds-align_absolute-center pageSize" style="background-color: white; display: contents">
+                <c-show-code path="EventLoop.png" style="max-height: 100%; max-width: 100%; display: block"></c-show-code>
+                <!-- <img src="/resources/EventLoop.png" style="max-height: 100%; max-width: 100%; display: block" /> -->
+              </div>
+            </c-tab>
+            <c-tab label="Resources">
+              <div class="slds-align_absolute-center pageSize" style="background-color: black">
+                <div style="color: white">
+                  Resources...<br />
+                  <ul>
+                    <li>https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be</li>
+                    <li>https://www.youtube.com/watch?v=u1kqx6AenYw</li>
+                    <li>https://www.youtube.com/watch?v=cCOL7MC4Pl0</li>
+                    <li>https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide</li>
+                    <li>https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth</li>
+                  </ul>
                 </div>
-            </lightning-layout-item>
-            <lightning-layout-item style="background-color: white" size="12">
-                <div class="slds-p-bottom_xx-small">&nbsp;</div>
-            </lightning-layout-item>
-        </lightning-layout>
-    </div>
+              </div>
+            </c-tab>
+          </c-tabset>
+        </div>
+      </lightning-layout-item>
+      <lightning-layout-item style="background-color: white" size="12">
+        <div class="slds-p-bottom_xx-small">&nbsp;</div>
+      </lightning-layout-item>
+    </lightning-layout>
+  </div>
 </template>
