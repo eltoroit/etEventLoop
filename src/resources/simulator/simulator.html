@@ -8,304 +8,255 @@ Tool: https://slides.com/
 Code: https://revealjs.com/
 -->
 <html class="sl-root decks export offline loaded">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>@ELTOROIT: JavaScript Event Loop Explained</title>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>@ELTOROIT: JavaScript Event Loop Explained</title>
 
-    <link rel="stylesheet" type="text/css" href="lib/offline-v2.css" />
-    <link rel="stylesheet" type="text/css" href="/SLDS/styles/salesforce-lightning-design-system.min.css" />
-    <style>
-      .hljs-ln-line {
-        font-size: 20px !important;
-        margin: 0px 0px 7px 0px !important;
-      }
-      .myBox {
-        font-size: 20px !important;
-        margin: 0px 0px 7px 0px !important;
-      }
-      .highlight-line > .hljs-ln-numbers {
-        color: red !important;
-        background-color: yellow;
-      }
-    </style>
-  </head>
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css" />
+		<link rel="stylesheet" type="text/css" href="/SLDS/styles/salesforce-lightning-design-system.min.css" />
+		<link rel="stylesheet" type="text/css" href="simulator.css" />
+	</head>
 
-  <body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
-    <div class="reveal">
-      <div class="slides">
-        <!-- Cover Page -->
-        <section data-id="ce619c458328a5e654aa3cca0abe4b73" data-transition="fade" data-background-transition="fade" data-background-color="#000000">
-          <div class="sl-block" data-block-type="text" data-name="text-455338" data-block-id="5fdb0784666ec9334dc742b01b9dd7ab" style="height: auto; width: 960px; left: 160px; top: 216px">
-            <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10">
-              <p>
-                <span style="color: #f0fff0"><span style="font-size: 2em">JavaScript Event Loop Explained</span></span>
-              </p>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 360px" data-block-id="bfb26e2fd04afc3b78d5534f64cd2c9d" data-name="text-16a451">
-            <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11">
-              <p>
-                <span style="color: #f0fff0"><span style="font-size: 1em">@ELTOROIT</span></span>
-              </p>
-            </div>
-          </div>
-        </section>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<!-- Cover Page -->
+				<section data-id="ce619c458328a5e654aa3cca0abe4b73" data-transition="fade" data-background-transition="fade" data-background-color="#000000">
+					<div class="sl-block" data-block-type="text" data-name="text-455338" data-block-id="5fdb0784666ec9334dc742b01b9dd7ab" style="height: auto; width: 960px; left: 160px; top: 216px">
+						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10">
+							<p>
+								<span style="color: #f0fff0"><span style="font-size: 2em">JavaScript Event Loop Explained</span></span>
+							</p>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 160px; top: 360px" data-block-id="bfb26e2fd04afc3b78d5534f64cd2c9d" data-name="text-16a451">
+						<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11">
+							<p>
+								<span style="color: #f0fff0"><span style="font-size: 1em">@ELTOROIT</span></span>
+							</p>
+						</div>
+					</div>
+				</section>
 
-        <!-- Bio Page -->
-        <section data-id="415ca4fd1b9ba33620e8a6d6abd6e6bc" data-transition="fade" data-background-transition="fade" data-background-color="#000000">
-          <div class="sl-block" data-block-type="image" data-name="image-552383" data-block-id="343e12c8b80012128c281df786b1cc70" style="max-width: 100%; max-height: 100%; left: 0px; top: 0px">
-            <div class="sl-block-content" style="z-index: 10">
-              <img data-natural-width="2212" data-natural-height="1244" data-src="/resources/bio.png" />
-            </div>
-          </div>
-          <div
-            class="sl-block"
-            data-block-type="image"
-            data-name="image-e80f0e"
-            data-block-id="d74d94bf35ca5caabcffbf7cee1eec73"
-            style="width: 184.269px; height: 127.43px; left: 923.96px; top: 584.285px"
-          >
-            <div class="sl-block-content" style="z-index: 11">
-              <img data-natural-width="402" data-natural-height="278" data-src="/resources/logosFast.gif" />
-            </div>
-          </div>
-        </section>
+				<!-- Bio Page -->
+				<section data-id="415ca4fd1b9ba33620e8a6d6abd6e6bc" data-transition="fade" data-background-transition="fade" data-background-color="#000000">
+					<div
+						class="sl-block"
+						data-block-type="image"
+						data-name="image-552383"
+						data-block-id="343e12c8b80012128c281df786b1cc70"
+						style="max-width: 100%; max-height: 100%; left: 0px; top: 0px"
+					>
+						<div class="sl-block-content" style="z-index: 10">
+							<img data-natural-width="2212" data-natural-height="1244" data-src="/resources/bio.png" />
+						</div>
+					</div>
+					<div
+						class="sl-block"
+						data-block-type="image"
+						data-name="image-e80f0e"
+						data-block-id="d74d94bf35ca5caabcffbf7cee1eec73"
+						style="width: 184.269px; height: 127.43px; left: 923.96px; top: 584.285px"
+					>
+						<div class="sl-block-content" style="z-index: 11">
+							<img data-natural-width="402" data-natural-height="278" data-src="/resources/logosFast.gif" />
+						</div>
+					</div>
+				</section>
 
-        <!-- Layout For Event Loop -->
-        <section data-id="9e12548dbe0ab320a62eea5ca4f9122b" data-transition="fade" data-background-transition="fade" data-background-color="#000000" data-et-id="slide">
-          <!-- Source Code -->
-          <div class="sl-block" data-block-type="code" data-name="code-4c8a41" style="width: 536.5px; height: 665px; left: 0px; top: 0px" data-block-id="f5be4853991ea4169665cf6988912162">
-            <div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 10">
-              <pre style="font-size: 14px; line-height: 14px" class="javascript" data-et-id="code"></pre>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="text" style="width: 536.5px; left: 0px; top: 665px; height: auto" data-block-id="f195b14a62ffc22329aae8483bd070ae" data-name="text-352e3b">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 22; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h2>(anonymous)</h2>
-            </div>
-          </div>
+				<!-- Layout For Event Loop -->
+				<section data-id="9e12548dbe0ab320a62eea5ca4f9122b" data-transition="fade" data-background-transition="fade" data-background-color="#000000" data-et-id="slide">
+					<!-- Source Code -->
+					<div class="sl-block" data-block-type="code" data-name="code-4c8a41" style="width: 536.5px; height: 665px; left: 0px; top: 0px" data-block-id="f5be4853991ea4169665cf6988912162">
+						<div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 10">
+							<pre style="font-size: 14px; line-height: 14px" class="javascript" data-et-id="code"></pre>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="text" style="width: 536.5px; left: 0px; top: 665px; height: auto" data-block-id="f195b14a62ffc22329aae8483bd070ae" data-name="text-352e3b">
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 22; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h2>(anonymous)</h2>
+						</div>
+					</div>
 
-          <!-- Stack -->
-          <div class="sl-block" data-block-type="text" style="width: 536.5px; left: 554.5px; top: 233px; height: auto" data-name="text-624419" data-block-id="fe4adf331fa6323bccc78ced0655fe0a">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h2>Stack</h2>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="code" style="width: 536.5px; height: 233px; left: 554.5px; top: 0px">
-            <div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11" data-code-wrap="true">
-              <pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="stack">ELTOROIT - STACK</code></pre>
-            </div>
-          </div>
+					<!-- Stack -->
+					<div
+						class="sl-block"
+						data-block-type="text"
+						style="width: 536.5px; left: 554.5px; top: 233px; height: auto"
+						data-name="text-624419"
+						data-block-id="fe4adf331fa6323bccc78ced0655fe0a"
+					>
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h2>Stack</h2>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="code" style="width: 536.5px; height: 233px; left: 554.5px; top: 0px">
+						<div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 11" data-code-wrap="true">
+							<pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="stack">ELTOROIT - STACK</code></pre>
+						</div>
+					</div>
 
-          <!-- Web API -->
-          <div class="sl-block" data-block-type="text" style="width: 536.5px; left: 1108.5px; top: 233px; height: auto" data-block-id="930aea80c21f8d84439729f1cf5704d6" data-name="text-3af5cb">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h2>Web API</h2>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="code" style="width: 536.5px; height: 233px; left: 1108.5px; top: 0px">
-            <div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 13" data-code-wrap="true">
-              <pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="webAPI">ELTOROIT - WEB API</code></pre>
-            </div>
-          </div>
+					<!-- Web API -->
+					<div
+						class="sl-block"
+						data-block-type="text"
+						style="width: 536.5px; left: 1108.5px; top: 233px; height: auto"
+						data-block-id="930aea80c21f8d84439729f1cf5704d6"
+						data-name="text-3af5cb"
+					>
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h2>Web API</h2>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="code" style="width: 536.5px; height: 233px; left: 1108.5px; top: 0px">
+						<div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 13" data-code-wrap="true">
+							<pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="webAPI">ELTOROIT - WEB API</code></pre>
+						</div>
+					</div>
 
-          <!-- Queues -->
-          <!-- Titles -->
-          <div class="sl-block" data-block-type="text" style="width: 536.5px; left: 554.5px; top: 593px; height: auto" data-block-id="78723f049a720b560a7869b244d7b30a" data-name="text-0997a3">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h2>Queues</h2>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="text" style="width: 264px; left: 554.5px; top: 322px; height: auto" data-block-id="b6285d9b7f7b405e0b11aa366a66e436" data-name="text-a1760b">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 23; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h3>Task</h3>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="text" style="width: 264px; left: 827px; top: 322px; height: auto" data-block-id="cb1ef709e18cbea40cf48644ab9343c7" data-name="text-710b19">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 24; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h3>
-                <span style="font-size: 1em">Microtask</span>
-              </h3>
-            </div>
-          </div>
+					<!-- Queues -->
+					<!-- Titles -->
+					<div
+						class="sl-block"
+						data-block-type="text"
+						style="width: 536.5px; left: 554.5px; top: 593px; height: auto"
+						data-block-id="78723f049a720b560a7869b244d7b30a"
+						data-name="text-0997a3"
+					>
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h2>Queues</h2>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="text" style="width: 264px; left: 554.5px; top: 322px; height: auto" data-block-id="b6285d9b7f7b405e0b11aa366a66e436" data-name="text-a1760b">
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 23; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h3>Task</h3>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="text" style="width: 264px; left: 827px; top: 322px; height: auto" data-block-id="cb1ef709e18cbea40cf48644ab9343c7" data-name="text-710b19">
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 24; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h3>
+								<span style="font-size: 1em">Microtask</span>
+							</h3>
+						</div>
+					</div>
 
-          <!-- Task Queue-->
-          <div class="sl-block" data-block-type="code" style="width: 264px; height: 233px; left: 554.5px; top: 360px">
-            <div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 15; padding: 0px 5px 0px 5px" data-code-wrap="true">
-              <pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="taskQueue">ELTOROIT - TASK QUEUE</code></pre>
-            </div>
-          </div>
+					<!-- Task Queue-->
+					<div class="sl-block" data-block-type="code" style="width: 264px; height: 233px; left: 554.5px; top: 360px">
+						<div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 15; padding: 0px 5px 0px 5px" data-code-wrap="true">
+							<pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="taskQueue">ELTOROIT - TASK QUEUE</code></pre>
+						</div>
+					</div>
 
-          <!-- Microtask Queue-->
-          <div class="sl-block" data-block-type="code" style="width: 264px; height: 233px; left: 827px; top: 360px">
-            <div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 25; padding: 0px 5px 0px 5px" data-code-wrap="true">
-              <pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="microtaskQueue">ELTOROIT - MICROTASK QUEUE</code></pre>
-            </div>
-          </div>
+					<!-- Microtask Queue-->
+					<div class="sl-block" data-block-type="code" style="width: 264px; height: 233px; left: 827px; top: 360px">
+						<div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 25; padding: 0px 5px 0px 5px" data-code-wrap="true">
+							<pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="microtaskQueue">ELTOROIT - MICROTASK QUEUE</code></pre>
+						</div>
+					</div>
 
-          <!-- Console -->
-          <div class="sl-block" data-block-type="code" style="width: 536.5px; left: 1108.5px; top: 593px; height: auto" data-block-id="9fb3672afd4ec5853fe6a3f7a46919b5" data-name="text-73939c">
-            <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 17; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
-              <h2>Console</h2>
-            </div>
-          </div>
-          <div class="sl-block" data-block-type="code" style="width: 536.5px; height: 271px; left: 1108.5px; top: 322px">
-            <div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 18" data-code-wrap="true">
-              <pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="console">ELTOROIT - CONSOLE</code></pre>
-            </div>
-          </div>
+					<!-- Console -->
+					<div
+						class="sl-block"
+						data-block-type="code"
+						style="width: 536.5px; left: 1108.5px; top: 593px; height: auto"
+						data-block-id="9fb3672afd4ec5853fe6a3f7a46919b5"
+						data-name="text-73939c"
+					>
+						<div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 17; text-align: center; font-size: 75%; color: rgb(240, 255, 240)">
+							<h2>Console</h2>
+						</div>
+					</div>
+					<div class="sl-block" data-block-type="code" style="width: 536.5px; height: 271px; left: 1108.5px; top: 322px">
+						<div class="sl-block-content notranslate" data-highlight-theme="github-gist" data-code-frame="none" style="z-index: 18" data-code-wrap="true">
+							<pre class="javascript myBox" style="font-size: 16px; line-height: 19px"><code data-et-id="console">ELTOROIT - CONSOLE</code></pre>
+						</div>
+					</div>
 
-          <!-- Controls: Sample Selector -->
-          <div class="sl-block" data-block-type="code" style="width: 400px; left: 880px; top: 685px" data-block-id="bdcb98fed2d448d7e2c565322875c844" data-name="code-b3483e">
-            <div class="sl-block-content notranslate" style="z-index: 21">
-              <div class="slds-form-element">
-                <div class="slds-form-element__control">
-                  <div class="slds-select_container">
-                    <select class="slds-select" data-et-id="sampleSelector" style="height: 40px; background-color: #1dd4d5">
-                      <option value="">Select demo...</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+					<!-- Controls: Sample Selector -->
+					<div class="sl-block" data-block-type="code" style="width: 400px; left: 880px; top: 685px" data-block-id="bdcb98fed2d448d7e2c565322875c844" data-name="code-b3483e">
+						<div class="sl-block-content notranslate" style="z-index: 21">
+							<div class="slds-form-element">
+								<div class="slds-form-element__control">
+									<div class="slds-select_container">
+										<select class="slds-select" data-et-id="sampleSelector" style="height: 40px; background-color: #1dd4d5">
+											<option value="">Select demo...</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
-          <!-- Controls: Icon: Reset -->
-          <div class="sl-block" data-block-type="shape" style="width: 35px; height: 35px; left: 1300px; top: 688px" data-block-id="7139d7503c5ca0212b3e08defc4c15d9" data-name="shape-262d28">
-            <div data-et-id="reset" class="slds-hide" style="border: 1px solid white; padding: 5px 5px 5px 5px; border-radius: 50%">
-              <span class="sl-block-content" data-shape-type="triangle-left" data-shape-stretch="false" style="z-index: 20; cursor: pointer"
-                ><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
-                  <use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#skip_back" style="stroke: black; fill: #1dd4d5" /></svg
-              ></span>
-            </div>
-          </div>
+					<!-- Controls: Icon: Reset -->
+					<div class="sl-block" data-block-type="shape" style="width: 35px; height: 35px; left: 1300px; top: 688px" data-block-id="7139d7503c5ca0212b3e08defc4c15d9" data-name="shape-262d28">
+						<div data-et-id="reset" class="slds-hide" style="border: 1px solid white; padding: 5px 5px 5px 5px; border-radius: 50%">
+							<span class="sl-block-content" data-shape-type="triangle-left" data-shape-stretch="false" style="z-index: 20; cursor: pointer"
+								><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
+									<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#skip_back" style="stroke: black; fill: #1dd4d5" /></svg
+							></span>
+						</div>
+					</div>
 
-          <!-- Controls: Icon: Prev -->
-          <div class="sl-block" data-block-type="shape" style="width: 35px; height: 35px; left: 1340px; top: 688px" data-block-id="7139d7503c5ca0212b3e08defc4c15d9" data-name="shape-262d28">
-            <div data-et-id="prevArrow" class="slds-hide" style="border: 1px solid white; padding: 3px; border-radius: 50%">
-              <span class="sl-block-content" data-shape-type="triangle-left" data-shape-stretch="false" style="z-index: 20; cursor: pointer"
-                ><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
-                  <use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#back" style="stroke: black; fill: #1dd4d5" /></svg
-              ></span>
-            </div>
-          </div>
+					<!-- Controls: Icon: Prev -->
+					<div class="sl-block" data-block-type="shape" style="width: 35px; height: 35px; left: 1340px; top: 688px" data-block-id="7139d7503c5ca0212b3e08defc4c15d9" data-name="shape-262d28">
+						<div data-et-id="prevArrow" class="slds-hide" style="border: 1px solid white; padding: 3px; border-radius: 50%">
+							<span class="sl-block-content" data-shape-type="triangle-left" data-shape-stretch="false" style="z-index: 20; cursor: pointer"
+								><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
+									<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#back" style="stroke: black; fill: #1dd4d5" /></svg
+							></span>
+						</div>
+					</div>
 
-          <!-- Controls: Icon: Next -->
-          <div class="sl-block" data-block-type="shape" data-name="shape-d1229b" data-block-id="ea991345ff3a13c3d32f83d805d0483b" style="width: 35px; height: 35px; left: 1380px; top: 688px">
-            <div data-et-id="nextArrow" class="slds-hide" style="border: 1px solid white; padding: 3px; border-radius: 50%">
-              <span class="sl-block-content" data-shape-type="triangle-right" data-shape-stretch="false" style="z-index: 19; cursor: pointer"
-                ><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
-                  <use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#forward" style="stroke: black; fill: #1dd4d5" /></svg
-              ></span>
-            </div>
-          </div>
+					<!-- Controls: Icon: Next -->
+					<div class="sl-block" data-block-type="shape" data-name="shape-d1229b" data-block-id="ea991345ff3a13c3d32f83d805d0483b" style="width: 35px; height: 35px; left: 1380px; top: 688px">
+						<div data-et-id="nextArrow" class="slds-hide" style="border: 1px solid white; padding: 3px; border-radius: 50%">
+							<span class="sl-block-content" data-shape-type="triangle-right" data-shape-stretch="false" style="z-index: 19; cursor: pointer"
+								><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
+									<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#forward" style="stroke: black; fill: #1dd4d5" /></svg
+							></span>
+						</div>
+					</div>
 
-          <!-- Controls: Icon: Start timer -->
-          <div class="sl-block" data-block-type="shape" data-name="shape-d1229b" data-block-id="ea991345ff3a13c3d32f83d805d0483b" style="width: 35px; height: 35px; left: 1420px; top: 688px">
-            <div data-et-id="timerStart" class="slds-hide" style="border: 1px solid white; padding: 5px 5px 5px 6px; border-radius: 50%">
-              <span class="sl-block-content" data-shape-type="triangle-right" data-shape-stretch="false" style="z-index: 19; cursor: pointer"
-                ><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
-                  <use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#clock" style="stroke: black; fill: #1dd4d5" /></svg
-              ></span>
-            </div>
-          </div>
+					<!-- Controls: Icon: Start timer -->
+					<div class="sl-block" data-block-type="shape" data-name="shape-d1229b" data-block-id="ea991345ff3a13c3d32f83d805d0483b" style="width: 35px; height: 35px; left: 1420px; top: 688px">
+						<div data-et-id="timerStart" class="slds-hide" style="border: 1px solid white; padding: 5px 5px 5px 6px; border-radius: 50%">
+							<span class="sl-block-content" data-shape-type="triangle-right" data-shape-stretch="false" style="z-index: 19; cursor: pointer"
+								><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
+									<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#clock" style="stroke: black; fill: #1dd4d5" /></svg
+							></span>
+						</div>
+					</div>
 
-          <!-- Controls: Icon: Stop timer -->
-          <div class="sl-block" data-block-type="shape" data-name="shape-d1229b" data-block-id="ea991345ff3a13c3d32f83d805d0483b" style="width: 35px; height: 35px; left: 1420px; top: 688px">
-            <div data-et-id="timerStop" class="slds-hide" style="border: 1px solid white; padding: 6px 6px 6px 6px; border-radius: 50%">
-              <span class="sl-block-content" data-shape-type="triangle-right" data-shape-stretch="false" style="z-index: 19; cursor: pointer"
-                ><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
-                  <use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#pause" style="stroke: black; fill: #1dd4d5" /></svg
-              ></span>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </body>
+					<!-- Controls: Icon: Stop timer -->
+					<div class="sl-block" data-block-type="shape" data-name="shape-d1229b" data-block-id="ea991345ff3a13c3d32f83d805d0483b" style="width: 35px; height: 35px; left: 1420px; top: 688px">
+						<div data-et-id="timerStop" class="slds-hide" style="border: 1px solid white; padding: 6px 6px 6px 6px; border-radius: 50%">
+							<span class="sl-block-content" data-shape-type="triangle-right" data-shape-stretch="false" style="z-index: 19; cursor: pointer"
+								><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveAspectRatio="xMidYMid" viewBox="0 0 35 35">
+									<use xlink:href="/SLDS/icons/utility-sprite/svg/symbols.svg#pause" style="stroke: black; fill: #1dd4d5" /></svg
+							></span>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+	<!-- Spinner -->
+	<div data-et-id="spinner" class="slds-spinner_container slds-hide">
+		<div role="status" class="slds-spinner slds-spinner_large slds-spinner_brand">
+			<span class="slds-assistive-text">Loading</span>
+			<div class="slds-spinner__dot-a"></div>
+			<div class="slds-spinner__dot-b"></div>
+		</div>
+	</div>
 
-  <script src="lib/_SLConfig.js"></script>
-  <script src="lib/reveal.js"></script>
-  <script src="lib/reveal-plugins.js"></script>
-  <script src="lib/offline.js"></script>
-  <script src="lib/_SlidesCode.js"></script>
+	<script src="lib/_SLConfig.js"></script>
+	<script src="lib/reveal.js"></script>
+	<script src="lib/reveal-plugins.js"></script>
+	<script src="lib/offline.js"></script>
+	<script src="lib/_SlidesCode.js"></script>
 
-  <!-- Initialize the presentation -->
-  <script type="module">
-    import Controller from './controller.js';
-
-    let controller;
-    let slidesCode = new SlidesCode();
-    slidesCode.initialize(Reveal);
-
-    Reveal.on('ready', (event) => {
-      if (controller === undefined) {
-        let savedData = null;
-        let strSaveData = localStorage.getItem('savedData');
-        if (strSaveData) {
-          savedData = JSON.parse(strSaveData);
-        } else {
-          savedData = {
-            // Initialize at a specific demo, good for quick tests...
-            demoNumber: 0
-          };
-        }
-        localStorage.setItem('savedData', JSON.stringify(savedData));
-        controller = new Controller(Reveal, slidesCode, savedData);
-      }
-    });
-
-    Reveal.on('slidechanged', (event) => {
-      if (controller) {
-        controller.hideNavigationArrows();
-      }
-    });
-  </script>
-
-  <!-- Mutation observer -->
-  <script>
-    let oldHREF = ''; //document.location.href;
-
-    // Select the node that will be observed for mutations
-    const targetNode = document.querySelector('body');
-
-    // Options for the observer (which mutations to observe)
-    // https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit
-    const config = { attributes: false, childList: true, subtree: true };
-
-    // Create an observer instance linked to the callback function
-    const observer = new MutationObserver((mutationsList, observer) => {
-      for (const mutation of mutationsList) {
-        if (oldHREF != document.location.href) {
-          let newHREF = document.location.href;
-          console.log(`HREF changed: Old: ${oldHREF}. New: ${newHREF}`);
-          oldHREF = newHREF;
-        }
-      }
-    });
-
-    // Start observing the target node for configured mutations
-    observer.observe(targetNode, config);
-
-    // Later, you can stop observing
-    // observer.disconnect();
-  </script>
-
-  <!-- Spinner -->
-  <div data-et-id="spinner" class="slds-spinner_container slds-hide">
-    <div role="status" class="slds-spinner slds-spinner_large slds-spinner_brand">
-      <span class="slds-assistive-text">Loading</span>
-      <div class="slds-spinner__dot-a"></div>
-      <div class="slds-spinner__dot-b"></div>
-    </div>
-  </div>
-
-  <style>
-    /* Hide copy button */
-    button.copy-code-to-clipboard {
-      display: none !important;
-    }
-  </style>
+	<!-- Initialize the presentation -->
+	<script src="simulator.js" type="module"></script>
 </html>

@@ -1,8 +1,8 @@
 # Jest coverage
 coverage/
 
-# Default lib folder
-lib/
+# Samples
+samples/
 
 # Default dist folder
 dist/
