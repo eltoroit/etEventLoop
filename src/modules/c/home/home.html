@@ -1,70 +1,103 @@
 <template>
-  <div class="slds-p-around_xx-large">
-    <lightning-layout horizontal-align="spread" multiple-rows>
-      <lightning-layout-item size="12">
-        <div class="slds-text-heading_large slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
-      </lightning-layout-item>
-      <lightning-layout-item size="12">
-        <div class="slds-text-heading_small slds-align_absolute-center">By @ELTOROIT</div>
-        <div class="slds-p-bottom_large">&nbsp;</div>
-      </lightning-layout-item>
-      <lightning-layout-item size="12">
-        <div style="background-color: white">
-          <c-tabset default-tab="Simulator" style="width: 100%; display: inline-block">
-            <c-tab label="Who Am I?">
-              <div class="slds-align_absolute-center pageSize" style="background-color: white">
-                <img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
-              </div>
-            </c-tab>
-            <c-tab label="Recording">
-              <div class="slds-align_absolute-center pageSize" style="background-color: black">
-                <div style="color: white">Recording</div>
-              </div>
-            </c-tab>
-            <c-tab label="Powerpoint">
-              <div class="slds-align_absolute-center pageSize" style="background-color: black">
-                <div style="color: white">Powerpoint</div>
-              </div>
-            </c-tab>
-            <c-tab label="Simulator">
-              <iframe src="/resources/simulator/simulator.html?timer=500#/2" class="pageSize">Simulator</iframe>
-            </c-tab>
-            <c-tab label="Demo: Blink">
-              <div class="pageSize">
-                <c-demo-blink></c-demo-blink>
-              </div>
-            </c-tab>
-            <c-tab label="Demo: Loops">
-              <div class="pageSize">
-                <c-demo-loops></c-demo-loops>
-              </div>
-            </c-tab>
-            <c-tab label="Algorithm">
-              <div class="slds-align_absolute-center pageSize" style="background-color: white; display: contents">
-                <c-show-code path="EventLoop.png" style="max-height: 100%; max-width: 100%; display: block"></c-show-code>
-                <!-- <img src="/resources/EventLoop.png" style="max-height: 100%; max-width: 100%; display: block" /> -->
-              </div>
-            </c-tab>
-            <c-tab label="Resources">
-              <div class="slds-align_absolute-center pageSize" style="background-color: black">
-                <div style="color: white">
-                  Resources...<br />
-                  <ul>
-                    <li>https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be</li>
-                    <li>https://www.youtube.com/watch?v=u1kqx6AenYw</li>
-                    <li>https://www.youtube.com/watch?v=cCOL7MC4Pl0</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth</li>
-                  </ul>
-                </div>
-              </div>
-            </c-tab>
-          </c-tabset>
-        </div>
-      </lightning-layout-item>
-      <lightning-layout-item style="background-color: white" size="12">
-        <div class="slds-p-bottom_xx-small">&nbsp;</div>
-      </lightning-layout-item>
-    </lightning-layout>
-  </div>
+	<div class="slds-p-around_x-small">
+		<lightning-layout horizontal-align="spread" multiple-rows>
+			<lightning-layout-item size="12">
+				<div class="slds-text-heading_large slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
+			</lightning-layout-item>
+			<!-- <lightning-layout-item size="12">
+				<div class="slds-text-heading_small slds-align_absolute-center">
+					<a href="https://etEventLoop.herokuapp.com" style="color: black; letter-spacing: 0.3em; font-weight: bold">https://etEventLoop.herokuapp.com</a>
+				</div>
+			</lightning-layout-item> -->
+			<lightning-layout-item size="12">
+				<div class="slds-text-heading_small slds-align_absolute-center">By @ELTOROIT</div>
+				<div class="slds-p-bottom_xx-small">&nbsp;</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12">
+				<div style="background-color: white">
+					<c-tabset default-tab="Who Am I?" style="width: 100%; display: inline-block">
+						<c-tab label="Who Am I?">
+							<div class="slds-align_absolute-center pageSize" style="background-color: white">
+								<img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
+							</div>
+						</c-tab>
+						<c-tab label="Simulator">
+							<iframe src="/resources/simulator/simulator.html?timer=500#/2" class="pageSize" style="background-color: black">Simulator</iframe>
+						</c-tab>
+						<c-tab label="Demo: Blink">
+							<div class="pageSize">
+								<c-demo-blink></c-demo-blink>
+							</div>
+						</c-tab>
+						<c-tab label="Demo: Loops">
+							<div class="pageSize">
+								<c-demo-loops></c-demo-loops>
+							</div>
+						</c-tab>
+						<c-tab label="Event Loop Algorithm">
+							<div class="slds-align_absolute-center pageSize" style="background-color: white; display: contents">
+								<c-show-code path="EventLoop.png" style="max-height: 100%; max-width: 100%; display: block"></c-show-code>
+								<!-- <img src="/resources/EventLoop.png" style="max-height: 100%; max-width: 100%; display: block" /> -->
+							</div>
+						</c-tab>
+						<c-tab label="Resources">
+							<div class="pageSize">
+								<div class="slds-text-heading_large">Resources...</div>
+
+								<!-- My Files -->
+								<div class="slds-text-heading_medium slds-p-vertical_small">My files</div>
+								<ul class="slds-has-dividers_around slds-has-block-links_space slds-p-bottom_xx-small">
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://eteventloop.herokuapp.com/">Website (https://eteventloop.herokuapp.com/)</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="/resources/etEventLoop.ppsx" target="_blank">Slides</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="javascript:alert('NO YET!')">Recorded Session</a>
+									</li>
+								</ul>
+
+								<!-- Documentation -->
+								<div class="slds-text-heading_medium slds-p-vertical_small">Documentation</div>
+								<ul class="slds-has-dividers_around slds-has-block-links_space slds-p-bottom_xx-small">
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" target="_blank">Concurrency model and the event loop</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide" target="_blank">Using microtasks in JavaScript with queueMicrotask()</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth" target="_blank"
+											>In depth: Microtasks and the JavaScript runtime environment</a
+										>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model" target="_blank">HTML Specs: 8.1.6.3 Processing model</a>
+									</li>
+								</ul>
+
+								<!-- YouTube Videos -->
+								<div class="slds-text-heading_medium slds-p-vertical_small">YouTube Videos</div>
+								<lightning-layout multiple-rows class="slds-grid slds-grid_align-center">
+									<lightning-layout-item size="4">
+										<c-resource-video video-id="8aGhZQkoFbQ"></c-resource-video>
+									</lightning-layout-item>
+									<lightning-layout-item size="4">
+										<c-resource-video video-id="u1kqx6AenYw"></c-resource-video>
+									</lightning-layout-item>
+									<lightning-layout-item size="4">
+										<c-resource-video video-id="cCOL7MC4Pl0"></c-resource-video>
+									</lightning-layout-item>
+								</lightning-layout>
+							</div>
+						</c-tab>
+					</c-tabset>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item style="background-color: white" size="12">
+				<div class="slds-p-bottom_xx-small">&nbsp;</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
 </template>

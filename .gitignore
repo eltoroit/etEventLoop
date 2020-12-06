@@ -29,3 +29,6 @@ ehthumbs.db
 $RECYCLE.BIN/
 .sfdx/*
 src/SLDS/*
+~$*.pptx
+~$*.ppsx
+package-lock.json
