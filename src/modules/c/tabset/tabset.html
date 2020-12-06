@@ -1,9 +1,9 @@
 <template>
 	<div class={classes.div}>
-		<ul class={classes.ul} onclick={onSwitchTab}>
+		<ul class={classes.ul}>
 			<template for:each={tabs} for:item="tab">
-				<li key={tab.idx} class={classes.li} data-idx={tab.idx} style="margin: 0px; padding: 0px">
-					<span class={classes.span} data-idx-span={tab.idx} style="padding: 0px 10px 0px 10px">{tab.label}</span>
+				<li key={tab.idx} class={classes.li} data-idx={tab.idx} onclick={onSwitchTab}>
+					<span class={classes.span} data-idx-span={tab.idx}>{tab.label}</span>
 				</li>
 			</template>
 		</ul>
