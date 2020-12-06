@@ -15,7 +15,7 @@
 			</lightning-layout-item>
 			<lightning-layout-item size="12">
 				<div style="background-color: white">
-					<c-tabset default-tab="Who Am I?" style="width: 100%; display: inline-block">
+					<c-tabset default-tab="Who Am I?" variant="scoped" style="width: 100%; display: inline-block">
 						<c-tab label="Who Am I?">
 							<div class="slds-align_absolute-center pageSize" style="background-color: white">
 								<img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
@@ -34,7 +34,7 @@
 								<c-demo-loops></c-demo-loops>
 							</div>
 						</c-tab>
-						<c-tab label="Event Loop Algorithm">
+						<c-tab label="Event Loop (Algorithm)">
 							<div class="slds-align_absolute-center pageSize" style="background-color: white; display: contents">
 								<c-show-code path="EventLoop.png" style="max-height: 100%; max-width: 100%; display: block"></c-show-code>
 								<!-- <img src="/resources/EventLoop.png" style="max-height: 100%; max-width: 100%; display: block" /> -->
@@ -42,11 +42,11 @@
 						</c-tab>
 						<c-tab label="Resources">
 							<div class="pageSize">
-								<div class="slds-text-heading_large">Resources...</div>
+								<div class="slds-text-heading_large slds-p-bottom_xx-large">Resources...</div>
 
 								<!-- My Files -->
-								<div class="slds-text-heading_medium slds-p-vertical_small">My files</div>
-								<ul class="slds-has-dividers_around slds-has-block-links_space slds-p-bottom_xx-small">
+								<div class="slds-text-heading_medium slds-p-bottom_medium">DreamTX '20 Session: Understanding JavaScript Event Loop by @ELTOROIT</div>
+								<ul class="slds-has-dividers_around slds-has-block-links_space slds-p-bottom_xx-large">
 									<li class="slds-item slds-text-heading_small resource">
 										<a href="https://eteventloop.herokuapp.com/">Website (https://eteventloop.herokuapp.com/)</a>
 									</li>
@@ -58,28 +58,9 @@
 									</li>
 								</ul>
 
-								<!-- Documentation -->
-								<div class="slds-text-heading_medium slds-p-vertical_small">Documentation</div>
-								<ul class="slds-has-dividers_around slds-has-block-links_space slds-p-bottom_xx-small">
-									<li class="slds-item slds-text-heading_small resource">
-										<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" target="_blank">Concurrency model and the event loop</a>
-									</li>
-									<li class="slds-item slds-text-heading_small resource">
-										<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide" target="_blank">Using microtasks in JavaScript with queueMicrotask()</a>
-									</li>
-									<li class="slds-item slds-text-heading_small resource">
-										<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth" target="_blank"
-											>In depth: Microtasks and the JavaScript runtime environment</a
-										>
-									</li>
-									<li class="slds-item slds-text-heading_small resource">
-										<a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model" target="_blank">HTML Specs: 8.1.6.3 Processing model</a>
-									</li>
-								</ul>
-
 								<!-- YouTube Videos -->
-								<div class="slds-text-heading_medium slds-p-vertical_small">YouTube Videos</div>
-								<lightning-layout multiple-rows class="slds-grid slds-grid_align-center">
+								<div class="slds-text-heading_medium slds-p-bottom_medium">YouTube Videos</div>
+								<lightning-layout multiple-rows class="slds-grid slds-grid_align-center slds-p-bottom_xx-large">
 									<lightning-layout-item size="4">
 										<c-resource-video video-id="8aGhZQkoFbQ"></c-resource-video>
 									</lightning-layout-item>
@@ -90,6 +71,48 @@
 										<c-resource-video video-id="cCOL7MC4Pl0"></c-resource-video>
 									</lightning-layout-item>
 								</lightning-layout>
+
+								<!-- Documentation -->
+								<div class="slds-text-heading_medium slds-p-bottom_medium">Documentation</div>
+								<ul class="slds-has-dividers_around slds-has-block-links_space slds-p-bottom_xx-large">
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop" target="_blank"> Concurrency model and the event Loop </a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide" target="_blank">
+											Using microtasks in JavaScript with queueMicrotask()
+										</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth" target="_blank">
+											In depth: Microtasks and the JavaScript runtime environment
+										</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises" target="_blank"> Using Promises </a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask" target="_blank">
+											WindowOrWorkerGlobalScope.queueMicrotask()
+										</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals" target="_blank">
+											Cooperative asynchronous JavaScript: Timeouts and intervals
+										</a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then" target="_blank"> Promise.prototype.then() </a>
+									</li>
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach" target="_blank"> Choosing the right approach </a>
+									</li>
+
+									<li class="slds-item slds-text-heading_small resource">
+										<a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model" target="_blank">HTML Specs: 8.1.6.3 Processing model</a>
+									</li>
+								</ul>
+								<div class="slds-p-vertical_xxx-large">&nbsp;</div>
 							</div>
 						</c-tab>
 					</c-tabset>
