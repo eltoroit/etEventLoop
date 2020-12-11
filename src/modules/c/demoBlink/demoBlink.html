@@ -1,64 +1,78 @@
 <template>
-    <lightning-layout multiple-rows horizontal-align="spread">
-        <lightning-layout-item size="8">
-            <div class="slds-p-vertical_large slds-p-right_large">
-                <div class="slds-text-heading_large slds-p-bottom_x-large">How To Blink?</div>
-                <div class="slds-text-heading_medium slds-p-bottom_x-large">
-                    I want to make this image blink, it should change the visibility every half second. The blinking starts when the user clicks the button and will blink 10 times.
-                </div>
-                <div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
-            </div>
-        </lightning-layout-item>
-        <lightning-layout-item size="4">
-            <div data-id="image" class="slds-align_absolute-center" style="background-color: black; text-align: center; height: 300px">
-                <!-- https://commons.wikimedia.org/wiki/File:Rotating_globe.gif -->
-                <img src="/resources/demos/RotatingGlobe.gif" style="width: 50%" />
-            </div>
-        </lightning-layout-item>
-    </lightning-layout>
-    <c-tabset variant="vertical" default-tab="Test">
-        <c-tab label="Test">
-            <c-button label="Flip Image" onclick={onFlip}></c-button>&nbsp;
-            <c-button if:false={isVisible} label="Show Image" onclick={onShowImage}></c-button>
-            <c-button if:true={isVisible} label="Hide Image" onclick={onHideImage}></c-button>
-            <c-tabset default-tab="Code">
-                <c-tab label="Code">
-                    <c-show-code path="blinkTest.png"></c-show-code>
-                </c-tab>
-            </c-tabset>
-        </c-tab>
-        <c-tab label="Version #1">
-            <div>
-                <c-button label="Version #1" onclick={onVersion1}></c-button>
-            </div>
-            <c-tabset default-tab="Code">
-                <c-tab label="Code">
-                    <c-show-code path="blinkVersion1.png"></c-show-code>
-                </c-tab>
-                <c-tab label="Notes">
-                    <c-show-notes>
-                        <li>The image does not blink!</li>
-                        <li>The counters fire first, and all at the same time</li>
-                        <li>One second later all the timers run</li>
-                    </c-show-notes>
-                </c-tab>
-            </c-tabset>
-        </c-tab>
-        <c-tab label="Version #2">
-            <div>
-                <c-button label="Version #2" onclick={onVersion2}></c-button>
-            </div>
-            <c-tabset default-tab="Code">
-                <c-tab label="Code">
-                    <c-show-code path="blinkVersion2.png"></c-show-code>
-                </c-tab>
-                <c-tab label="Notes">
-                    <c-show-notes>
-                        <li>The image blinks correctly</li>
-                    </c-show-notes>
-                </c-tab>
-            </c-tabset>
-        </c-tab>
-    </c-tabset>
-    <div class="slds-align_absolute-center slds-p-top_medium">Hint: Open the inspector tool and watch the event working</div>
+	<lightning-layout multiple-rows horizontal-align="spread">
+		<lightning-layout-item size="8">
+			<div class="slds-p-vertical_large slds-p-right_large">
+				<div class="slds-text-heading_large slds-p-bottom_x-large">How To Blink?</div>
+				<div class="slds-text-heading_medium slds-p-bottom_x-large">
+					I want to make this image blink, it should change the visibility every half second. The blinking starts when the user clicks the button and will blink 10 times.
+				</div>
+				<div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item size="4">
+			<div data-id="image" class="slds-align_absolute-center" style="background-color: black; text-align: center; height: 300px">
+				<!-- https://commons.wikimedia.org/wiki/File:Rotating_globe.gif -->
+				<img src="/resources/demos/RotatingGlobe.gif" style="width: 50%" />
+			</div>
+		</lightning-layout-item>
+	</lightning-layout>
+	<c-tabset variant="vertical" default-tab="Test" onswitch={onTabSwitch}>
+		<c-tab label="Test">
+			<lightning-layout-item size="12">
+				<div class="slds-m-bottom_medium">
+					<c-button label="Flip Image" onclick={onFlip}></c-button>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12">
+				<c-show-code path="blinkTest2.png"></c-show-code>
+			</lightning-layout-item>
+			<lightning-layout-item size="12">
+				<lightning-button if:false={isVisible} label="Show Image" onclick={onShowImage} variant="Base"></lightning-button>
+				<lightning-button if:true={isVisible} label="Hide Image" onclick={onHideImage} variant="Base"></lightning-button>
+			</lightning-layout-item>
+		</c-tab>
+		<c-tab label="Version #1">
+			<lightning-layout multiple-rows>
+				<lightning-layout-item size="12">
+					<div class="slds-m-bottom_medium">
+						<c-button label="Version #1" onclick={onVersion1}></c-button>
+					</div>
+				</lightning-layout-item>
+				<lightning-layout-item size="8">
+					<c-show-code path="blinkVersion1.png"></c-show-code>
+				</lightning-layout-item>
+				<lightning-layout-item size="4">
+					<div class="slds-m-left_medium">
+						<c-show-notes>
+							<li><b> Open the inspector tool and watch the event working </b></li>
+							<li>The image does not blink!</li>
+							<li>All the counters fire first, at the same time</li>
+							<li>Half a second later all the timers run, few milliseconds apart</li>
+						</c-show-notes>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+		</c-tab>
+		<c-tab label="Version #2">
+			<lightning-layout multiple-rows>
+				<lightning-layout-item size="12">
+					<div class="slds-m-bottom_medium">
+						<c-button label="Version #2" onclick={onVersion2}></c-button>
+					</div>
+				</lightning-layout-item>
+				<lightning-layout-item size="8">
+					<c-show-code path="blinkVersion2.png"></c-show-code>
+				</lightning-layout-item>
+				<lightning-layout-item size="4">
+					<div class="slds-m-left_medium">
+						<c-show-notes>
+							<li><b> Open the inspector tool and watch the event working </b></li>
+							<li>The image blinks as expected</li>
+						</c-show-notes>
+					</div>
+				</lightning-layout-item>
+			</lightning-layout>
+		</c-tab>
+	</c-tabset>
+	<div class="slds-align_absolute-center slds-p-top_medium">&nbsp;</div>
 </template>
