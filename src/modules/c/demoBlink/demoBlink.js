@@ -19,18 +19,20 @@ export default class DemoBlink extends LightningElement {
 			this.increaseCounter();
 			setTimeout(() => {
 				this.flipImage();
-			}, 100);
+			}, 500);
 		}
 	}
 
 	onVersion2() {
 		this.logStart();
 		const loop = () => {
+			this.flipImage();
 			setTimeout(() => {
 				if (this.isKeepLooping()) {
 					this.increaseCounter();
-					this.flipImage();
 					loop();
+				} else {
+					this.updateUI(true);
 				}
 			}, 500);
 		};
