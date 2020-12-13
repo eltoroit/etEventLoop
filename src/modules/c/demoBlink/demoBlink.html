@@ -18,18 +18,28 @@
 	</lightning-layout>
 	<c-tabset variant="vertical" default-tab="Test" onswitch={onTabSwitch}>
 		<c-tab label="Test">
-			<lightning-layout-item size="12">
-				<div class="slds-m-bottom_medium">
-					<c-button label="Flip Image" onclick={onFlip}></c-button>
-				</div>
-			</lightning-layout-item>
-			<lightning-layout-item size="12">
-				<c-show-code path="blinkTest2.png"></c-show-code>
-			</lightning-layout-item>
-			<!-- <lightning-layout-item size="12">
-				<lightning-button if:false={isVisible} label="Show Image" onclick={onShowImage} variant="Base"></lightning-button>
-				<lightning-button if:true={isVisible} label="Hide Image" onclick={onHideImage} variant="Base"></lightning-button>
-			</lightning-layout-item> -->
+			<lightning-layout multiple-rows>
+				<lightning-layout-item size="12">
+					<div class="slds-m-bottom_medium">
+						<c-button label="Flip Image" onclick={onFlip}></c-button>
+					</div>
+				</lightning-layout-item>
+				<lightning-layout-item size="8">
+					<c-show-code path="blinkTest2.png"></c-show-code>
+				</lightning-layout-item>
+				<lightning-layout-item size="4">
+					<div class="slds-m-left_medium">
+						<c-show-notes>
+							<li><b> Open the inspector tool and watch the event working </b></li>
+							<li>The button turns red while clicked</li>
+						</c-show-notes>
+					</div>
+				</lightning-layout-item>
+				<!-- <lightning-layout-item size="12">
+					<lightning-button if:false={isVisible} label="Show Image" onclick={onShowImage} variant="Base"></lightning-button>
+					<lightning-button if:true={isVisible} label="Hide Image" onclick={onHideImage} variant="Base"></lightning-button>
+				</lightning-layout-item> -->
+			</lightning-layout>
 		</c-tab>
 		<c-tab label="Version #1">
 			<lightning-layout multiple-rows>
