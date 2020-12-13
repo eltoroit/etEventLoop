@@ -1,11 +1,11 @@
 {
-    "packageDirectories": [
-        {
-            "path": "src",
-            "default": true
-        }
-    ],
-    "namespace": "",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "49.0"
+	"packageDirectories": [
+		{
+			"path": "lwc",
+			"default": true
+		}
+	],
+	"namespace": "",
+	"sfdcLoginUrl": "https://login.salesforce.com",
+	"sourceApiVersion": "49.0"
 }

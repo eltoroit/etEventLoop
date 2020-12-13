@@ -7,5 +7,6 @@ samples/
 # Default dist folder
 dist/
 
-# Default resources folder
-# src/resources
+# My files
+lwc/resources
+simulator/samples/**

@@ -1,4 +1,4 @@
 {
-    "prettier.printWidth": 200,
-    "salesforcedx-vscode-core.show-cli-success-msg": false
+	"prettier.printWidth": 200,
+	"salesforcedx-vscode-core.show-cli-success-msg": false
 }
