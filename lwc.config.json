@@ -1,8 +1,8 @@
 {
-    "modules": [
-        {
-            "dir": "src/modules"
-        },
-        { "npm": "lightning-base-components" }
-    ]
+	"modules": [
+		{
+			"dir": "lwc/modules"
+		},
+		{ "npm": "lightning-base-components" }
+	]
 }

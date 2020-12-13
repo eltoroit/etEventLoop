@@ -38,7 +38,7 @@
 		"**/*.{css,html,js,json,md,ts,yaml,yml}": [
 			"prettier --write"
 		],
-		"./src/**/*.js": [
+		"./lwc/**/*.js": [
 			"eslint"
 		]
 	},
@@ -46,11 +46,11 @@
 	"scripts": {
 		"build": "lwc-services build -m production",
 		"build:development": "lwc-services build",
-		"lint": "eslint ./src/**/*.js",
+		"lint": "eslint ./lwc/**/*.js",
 		"prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
 		"prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
-		"serve": "node scripts/server.js",
-		"etServe": "node scripts/etServer.js",
+		"serve": "node serverScripts/server.js",
+		"etServe": "node serverScripts/etServer.js",
 		"test:unit": "lwc-services test:unit",
 		"test:unit:coverage": "lwc-services test:unit --coverage",
 		"test:unit:debug": "lwc-services test:unit --debug",
