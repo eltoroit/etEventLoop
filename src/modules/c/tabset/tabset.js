@@ -71,6 +71,14 @@ export default class Tabset extends LightningElement {
 		tabs.forEach((tab) => {
 			if (Number(tab.attributes['data-idx'].value) === tabIdx) {
 				tab.classList.add('slds-is-active');
+				this.dispatchEvent(
+					new CustomEvent('switch', {
+						detail: {
+							index: tab.dataset.idx,
+							label: tab.dataset.label
+						}
+					})
+				);
 			} else {
 				tab.classList.remove('slds-is-active');
 			}

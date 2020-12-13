@@ -1,89 +1,97 @@
 import { LightningElement } from 'lwc';
 
 export default class DemoLoops extends LightningElement {
-    log = {};
-    showSpinner = false;
-    loopPauseSeconds = 5;
+	log = {};
+	showSpinner = false;
+	loopPauseSeconds = 5;
 
-    onWhileLoop() {
-        this.doSpinner(true);
-        let stop = this.logStart();
-        while (Date.now() < stop) {
-            this.logAdd();
-        }
-        this.logStop('whileTrue');
-        this.doSpinner(false);
-    }
+	get keepLooping() {
+		return Date.now() < this.stopAt;
+	}
 
-    onSetTimeoutLoop() {
-        this.doSpinner(true);
-        let stop = this.logStart();
-        const loop = () => {
-            if (Date.now() < stop) {
-                this.logAdd();
-                setTimeout(() => {
-                    loop();
-                }, 0);
-            } else {
-                this.logStop('setTimeoutLoop');
-                this.doSpinner(false);
-            }
-        };
-        loop();
-    }
+	onWhileLoop() {
+		this.doSpinner(true);
+		this.logStart();
+		while (this.keepLooping) {
+			this.logAdd();
+		}
+		this.logStop('whileTrue');
+		this.doSpinner(false);
+	}
 
-    onPromiseLoop() {
-        this.doSpinner(true);
-        let stop = this.logStart();
-        const loop = () => {
-            if (Date.now() < stop) {
-                this.logAdd();
-                Promise.resolve().then(() => {
-                    loop();
-                });
-            } else {
-                this.logStop('promiseLoop');
-                this.doSpinner(false);
-            }
-        };
-        loop();
-    }
+	onSetTimeoutLoop() {
+		this.doSpinner(true);
+		this.logStart();
+		const loop = () => {
+			if (this.keepLooping) {
+				this.logAdd();
+				setTimeout(() => {
+					loop();
+				}, 0);
+			} else {
+				this.logStop('setTimeoutLoop');
+				this.doSpinner(false);
+			}
+		};
+		loop();
+	}
 
-    onShowSpinner() {
-        this.doSpinner(true);
-    }
+	onPromiseLoop() {
+		this.doSpinner(true);
+		this.logStart();
+		const loop = () => {
+			if (this.keepLooping) {
+				this.logAdd();
+				Promise.resolve().then(() => {
+					loop();
+				});
+			} else {
+				this.logStop('promiseLoop');
+				this.doSpinner(false);
+			}
+		};
+		loop();
+	}
 
-    onHideSpinner() {
-        this.doSpinner(false);
-    }
+	onShowSpinner() {
+		this.doSpinner(true);
+	}
 
-    doSpinner(showSpinner) {
-        this.showSpinner = showSpinner;
-    }
+	onHideSpinner() {
+		this.doSpinner(false);
+	}
 
-    logStart() {
-        this.log = {};
-        let start = new Date();
-        console.log(`Started at ${start.toJSON()}`);
-        return start.setSeconds(start.getSeconds() + this.loopPauseSeconds);
-    }
+	onTabSwitch() {
+		this.doSpinner(false);
+	}
 
-    logStop(msg) {
-        console.log(`Stopped at ${new Date().toJSON()}`);
-        for (let [key, value] of Object.entries(this.log)) {
-            this.log[key] = value.toLocaleString();
-        }
-        console.log(msg, this.log);
-    }
+	doSpinner(showSpinner) {
+		this.showSpinner = showSpinner;
+	}
 
-    logAdd() {
-        let now = new Date();
-        // console.log(window.performance.now());
-        if (this.log[now.getSeconds()]) {
-            this.log[now.getSeconds()]++;
-        } else {
-            console.log(now.toLocaleTimeString());
-            this.log[now.getSeconds()] = 1;
-        }
-    }
+	logStart() {
+		this.log = {};
+		let startAt = new Date();
+		console.log(`Started at ${startAt.toJSON()}`);
+		this.stopAt = startAt.setSeconds(startAt.getSeconds() + this.loopPauseSeconds);
+	}
+
+	logStop(msg) {
+		console.log(`Stopped at ${new Date().toJSON()}`);
+		for (let [key, value] of Object.entries(this.log)) {
+			this.log[key] = value.toLocaleString();
+		}
+		console.log(msg, this.log);
+	}
+
+	logAdd() {
+		let now = new Date();
+		// console.log(window.performance.now());
+		if (this.log[now.getSeconds()]) {
+			this.log[now.getSeconds()]++;
+		} else {
+			console.log(now.toLocaleTimeString());
+			this.log[now.getSeconds()] = 1;
+		}
+	}
 }
