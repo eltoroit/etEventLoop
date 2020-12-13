@@ -31,4 +31,5 @@ $RECYCLE.BIN/
 src/SLDS/*
 ~$*.pptx
 ~$*.ppsx
+~$*.xlsx
 package-lock.json

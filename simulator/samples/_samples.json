@@ -31,36 +31,36 @@
   },
   "demos": [
     {
-      "name": "Demo: Basic calls (Understand UI)",
-      "code": "DemoBasicCalls"
+      "name": "Sample: Basic calls (Understand UI)",
+      "code": "SampleBasicCalls"
     },
     {
-      "name": "Demo: Multiple Timers",
-      "code": "DemoMultipleTimers"
+      "name": "Sample: Multiple Timers",
+      "code": "SampleMultipleTimers"
     },
     {
-      "name": "Demo: Promises",
-      "code": "DemoPromises"
+      "name": "Sample: Promises",
+      "code": "SamplePromises"
     },
     {
-      "name": "Wait Zero milliseconds",
-      "code": "SetTimeoutZero"
+      "name": "Other: Wait Zero milliseconds",
+      "code": "OtherSetTimeoutZero"
     },
     {
-      "name": "Chaining Methods",
-      "code": "MethodsChained"
+      "name": "Other: Chaining Methods",
+      "code": "OtherMethodsChained"
     },
     {
-      "name": "Simple Timer",
-      "code": "SetTimeout"
+      "name": "Other: Simple Timer",
+      "code": "OtherSetTimeout"
     },
     {
       "name": "TEST: Fill the boxes",
-      "code": "TestApp"
+      "code": "TestFillBoxes"
     },
     {
       "name": "TEST: Long (scrolls)",
-      "code": "TestHelloWorld"
+      "code": "TestLongScrolls"
     }
   ]
 }
