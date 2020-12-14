@@ -1,66 +1,74 @@
 {
-  "slide": {
-    "indexh": 1,
-    "indexv": 0
-  },
-  "Special Lines": [
-    {
-      "PAUSE": true
-    },
-    {
-      "TIMER": "ON"
-    },
-    {
-      "TIMER": "OFF"
-    },
-    {
-      "DEBUG": "CALL myTimer - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
-    }
-  ],
-  "sampleSteps": {
-    "lineNumber": "#",
-    "stack": "+|MESSAGE",
-    "webAPI": "+|MESSAGE",
-    "taskQueue": "+|MESSAGE",
-    "microtaskQueue": "+|MESSAGE",
-    "console": "+|MESSAGE"
-  },
-  "config": {
-    "delay": 500,
-    "autoNext": true
-  },
-  "demos": [
-    {
-      "name": "Sample: Basic calls (Understand UI)",
-      "code": "SampleBasicCalls"
-    },
-    {
-      "name": "Sample: Multiple Timers",
-      "code": "SampleMultipleTimers"
-    },
-    {
-      "name": "Sample: Promises",
-      "code": "SamplePromises"
-    },
-    {
-      "name": "Other: Wait Zero milliseconds",
-      "code": "OtherSetTimeoutZero"
-    },
-    {
-      "name": "Other: Chaining Methods",
-      "code": "OtherMethodsChained"
-    },
-    {
-      "name": "Other: Simple Timer",
-      "code": "OtherSetTimeout"
-    },
-    {
-      "name": "TEST: Fill the boxes",
-      "code": "TestFillBoxes"
-    },
-    {
-      "name": "TEST: Long (scrolls)",
-      "code": "TestLongScrolls"
-    }
-  ]
+	"slide": {
+		"indexh": 1,
+		"indexv": 0
+	},
+	"Special Lines": [
+		{
+			"PAUSE": true
+		},
+		{
+			"TIMER": "ON"
+		},
+		{
+			"TIMER": "OFF"
+		},
+		{
+			"DEBUG": "CALL myTimer - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+		}
+	],
+	"sampleSteps": {
+		"lineNumber": "#",
+		"stack": "+|MESSAGE",
+		"webAPI": "+|MESSAGE",
+		"taskQueue": "+|MESSAGE",
+		"microtaskQueue": "+|MESSAGE",
+		"console": "+|MESSAGE"
+	},
+	"config": {
+		"delay": 500,
+		"autoNext": true
+	},
+	"demos": [
+		{
+			"name": "Sample: Basic calls",
+			"code": "SampleBasicCalls"
+		},
+		{
+			"name": "Sample: Multiple Timers",
+			"code": "SampleMultipleTimers"
+		},
+		{
+			"name": "Sample: Promises",
+			"code": "SamplePromises"
+		},
+		{
+			"name": "Demo: Blink (Version 1)",
+			"code": "DemoBlinkV1"
+		},
+		{
+			"name": "Demo: Blink (Version 2)",
+			"code": "DemoBlinkV2"
+		},
+		{
+			"name": "Other: Wait Zero milliseconds",
+			"code": "OtherSetTimeoutZero"
+		},
+		{
+			"name": "Other: Chaining Methods",
+			"code": "OtherMethodsChained"
+		},
+		{
+			"name": "Other: Simple Timer",
+			"code": "OtherSetTimeout"
+		},
+		{
+			"name": "TEST: Fill the boxes",
+			"code": "TestFillBoxes"
+		},
+		{
+			"name": "TEST: Long (scrolls)",
+			"code": "TestLongScrolls"
+		}
+	]
 }

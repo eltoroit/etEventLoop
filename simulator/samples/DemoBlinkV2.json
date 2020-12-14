@@ -1,0 +1,122 @@
+[
+	{
+		"lineNumber": "1",
+		"taskQueue": "+|onVersion2()"
+	},
+	{
+		"lineNumber": "1",
+		"stack": "+|onVersion2()",
+		"taskQueue": "-|onVersion2()"
+	},
+	{
+		"lineNumber": "2"
+	},
+	{
+		"lineNumber": "3-12"
+	},
+	{
+		"lineNumber": "13"
+	},
+	{ "DEBUG": "Loop #1 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "3",
+		"stack": "+|loop(1)"
+	},
+	{
+		"lineNumber": "4"
+	},
+	{
+		"lineNumber": "5-12",
+		"webAPI": "+|🕒 500ms #5-12 (nextCounter = 1)"
+	},
+	{
+		"lineNumber": "13"
+	},
+	{
+		"lineNumber": "15",
+		"stack": "-|loop(1)"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|onVersion2()"
+	},
+	{
+		"lineNumber": "0"
+	},
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #5-12 (nextCounter = 1)"],
+		"taskQueue": ["+|#5-12 (nextC.. = 1)"]
+	},
+	{
+		"lineNumber": "5",
+		"stack": "+|#5-12 (nextCounter = 1)",
+		"taskQueue": ["-|#5-12 (nextC.. = 1)"]
+	},
+	{
+		"lineNumber": "6"
+	},
+	{
+		"lineNumber": "7"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{ "DEBUG": "Loop #2 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "3",
+		"stack": "+|loop(2)"
+	},
+	{
+		"lineNumber": "4"
+	},
+	{
+		"lineNumber": "5-12",
+		"webAPI": "+|🕒 500ms #5-12 (nextCounter = 2)"
+	},
+	{
+		"lineNumber": "13",
+		"stack": "-|loop(2)"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#5-12 (nextCounter = 1)"
+	},
+	{
+		"lineNumber": "0"
+	},
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #5-12 (nextCounter = 2)"],
+		"taskQueue": ["+|#5-12 (nextC.. = 2)"]
+	},
+	{ "DEBUG": "Loop #3 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "3",
+		"stack": "+|loop(2)",
+		"taskQueue": ["-|#5-12 (nextC.. = 2)"]
+	},
+	{
+		"lineNumber": "4"
+	},
+	{
+		"lineNumber": "5-12",
+		"webAPI": "+|🕒 500ms #5-12 (nextCounter = 3)"
+	},
+	{
+		"lineNumber": "13",
+		"stack": "-|loop(2)"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#5-12 (nextCounter = 2)"
+	},
+	{
+		"lineNumber": "0"
+	},
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #5-12 (nextCounter = 3)"],
+		"taskQueue": ["+|#5-12 (nextC.. = 3)"]
+	}
+]

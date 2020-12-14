@@ -1,0 +1,155 @@
+[
+	{ "DEBUG": "Loop - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"taskQueue": "+|(anonymous)"
+	},
+	{
+		"lineNumber": "12",
+		"stack": "+|(anonymous)",
+		"taskQueue": "-|(anonymous)"
+	},
+	{
+		"lineNumber": "1",
+		"stack": "+|onVersion1()"
+	},
+	{
+		"lineNumber": "2"
+	},
+	{
+		"lineNumber": "3"
+	},
+	{
+		"lineNumber": "4"
+	},
+	{
+		"lineNumber": "5"
+	},
+	{
+		"lineNumber": "6",
+		"console": "+|Counter: 1"
+	},
+	{
+		"lineNumber": "7-9",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 1)"
+	},
+	{
+		"lineNumber": "10"
+	},
+	{
+		"TIMER": "ON"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": [
+			"+|🕒 500ms #7-9 (TCounter = 2)",
+			"+|🕒 500ms #7-9 (TCounter = 3)",
+			"+|🕒 500ms #7-9 (TCounter = 4)",
+			"+|🕒 500ms #7-9 (TCounter = 5)",
+			"+|🕒 500ms #7-9 (TCounter = 6)",
+			"+|🕒 500ms #7-9 (TCounter = 7)",
+			"+|🕒 500ms #7-9 (TCounter = 8)",
+			"+|🕒 500ms #7-9 (TCounter = 9)",
+			"+|🕒 500ms #7-9 (TCounter = 10)"
+		],
+		"console": ["+|Counter: 2", "+|Counter: 3", "+|Counter: 4", "+|Counter: 5", "+|Counter: 6", "+|Counter: 7", "+|Counter: 8", "+|Counter: 9", "+|Counter: 10"]
+	},
+	{
+		"lineNumber": "11"
+	},
+	{
+		"TIMER": "OFF"
+	},
+	{
+		"lineNumber": "13",
+		"console": "+|Done",
+		"stack": "-|onVersion1()"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|(anonymous)"
+	},
+	{
+		"lineNumber": "0"
+	},
+	{ "DEBUG": "All timers expire - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": [
+			"-|🕒 500ms #7-9 (TCounter = 1)",
+			"-|🕒 500ms #7-9 (TCounter = 2)",
+			"-|🕒 500ms #7-9 (TCounter = 3)",
+			"-|🕒 500ms #7-9 (TCounter = 4)",
+			"-|🕒 500ms #7-9 (TCounter = 5)",
+			"-|🕒 500ms #7-9 (TCounter = 6)",
+			"-|🕒 500ms #7-9 (TCounter = 7)",
+			"-|🕒 500ms #7-9 (TCounter = 8)",
+			"-|🕒 500ms #7-9 (TCounter = 9)",
+			"-|🕒 500ms #7-9 (TCounter = 10)"
+		],
+		"taskQueue": [
+			"+|#7-9 (TCounter = 1)",
+			"+|#7-9 (TCounter = 2)",
+			"+|#7-9 (TCounter = 3)",
+			"+|#7-9 (TCounter = 4)",
+			"+|#7-9 (TCounter = 5)",
+			"+|#7-9 (TCounter = 6)",
+			"+|#7-9 (TCounter = 7)",
+			"+|#7-9 (TCounter = 8)",
+			"+|#7-9 (TCounter = 9)",
+			"+|#7-9 (TCounter = 10)"
+		]
+	},
+	{ "DEBUG": "Execute - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "7",
+		"taskQueue": "-|#7-9 (TCounter = 1)",
+		"stack": "+|#7-9 (TCounter = 1)"
+	},
+	{
+		"lineNumber": "8",
+		"console": "+|Flip: 1"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|#7-9 (TCounter = 1)"
+	},
+	{
+		"lineNumber": "0"
+	},
+	{
+		"TIMER": "ON"
+	},
+	{
+		"lineNumber": "0",
+		"stack": [
+			"-|#7-9 (TCounter = 2)",
+			"-|#7-9 (TCounter = 3)",
+			"-|#7-9 (TCounter = 4)",
+			"-|#7-9 (TCounter = 5)",
+			"-|#7-9 (TCounter = 6)",
+			"-|#7-9 (TCounter = 7)",
+			"-|#7-9 (TCounter = 8)",
+			"-|#7-9 (TCounter = 9)",
+			"-|#7-9 (TCounter = 10)"
+		],
+		"taskQueue": [
+			"-|#7-9 (TCounter = 2)",
+			"-|#7-9 (TCounter = 3)",
+			"-|#7-9 (TCounter = 4)",
+			"-|#7-9 (TCounter = 5)",
+			"-|#7-9 (TCounter = 6)",
+			"-|#7-9 (TCounter = 7)",
+			"-|#7-9 (TCounter = 8)",
+			"-|#7-9 (TCounter = 9)",
+			"-|#7-9 (TCounter = 10)"
+		],
+		"console": ["+|Flip: 2", "+|Flip: 3", "+|Flip: 4", "+|Flip: 5", "+|Flip: 6", "+|Flip: 7", "+|Flip: 8", "+|Flip: 9", "+|Flip: 10"]
+	},
+	{
+		"TIMER": "OFF"
+	},
+	{
+		"lineNumber": "0"
+	}
+]
