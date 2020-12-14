@@ -14,32 +14,47 @@ export default class DemoBlink extends LightningElement {
 	}
 
 	onVersion1() {
+		this.counter = 0;
 		this.logStart();
-		while (this.isKeepLooping()) {
-			this.increaseCounter();
-			setTimeout(() => {
-				this.flipImage();
-			}, 500);
+		while (this.counter < this.maxTimes) {
+			this.counter++;
+			console.log(`Counter: ${this.counter}`);
+			setTimeout(
+				(TCounter) => {
+					console.log(`TCounter: ${TCounter}`);
+					this.flipImage();
+				},
+				500,
+				this.counter
+			);
 		}
 	}
 
 	onVersion2() {
+		this.counter = 0;
 		this.logStart();
-		const loop = () => {
+		const loop = (counter) => {
+			this.counter = counter;
+			console.log(`Counter: ${counter}`);
 			this.flipImage();
-			setTimeout(() => {
-				if (this.isKeepLooping()) {
-					this.increaseCounter();
-					loop();
-				} else {
-					this.updateUI(true);
-				}
-			}, 500);
+			setTimeout(
+				(TCounter) => {
+					console.log(`TCounter: ${TCounter}`);
+					if (this.counter < this.maxTimes) {
+						loop(TCounter);
+					} else {
+						this.updateUI(true);
+					}
+				},
+				500,
+				counter + 1
+			);
 		};
-		loop();
+		loop(1);
 	}
 
 	onTabSwitch() {
+		this.counter = 0;
 		this.updateUI(true);
 	}
 
@@ -49,26 +64,16 @@ export default class DemoBlink extends LightningElement {
 
 	flipImage() {
 		this.updateUI(!this.isVisible);
-		console.log(`${this.isVisible ? 'ON' : 'OFF'} @ ${this.getDTTM()}`);
 	}
 
 	updateUI(isVisible) {
 		this.isVisible = isVisible;
 		let image = this.template.querySelector('div[data-id="image"]');
 		image.style.visibility = isVisible ? 'visible' : 'hidden';
-	}
-
-	increaseCounter() {
-		this.counter++;
-		console.log(`Counter: ${this.counter} @ ${this.getDTTM()}`);
-	}
-
-	isKeepLooping() {
-		return this.counter < this.maxTimes;
+		console.log(`${this.isVisible ? 'ON' : 'OFF'} | ${this.getDTTM()}`);
 	}
 
 	logStart() {
-		this.counter = 0;
 		console.log(`Starting loop @ ${this.getDTTM()}`);
 	}
 

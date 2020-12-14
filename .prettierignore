@@ -1,12 +1,9 @@
 # Jest coverage
 coverage/
 
-# Samples
-samples/
-
 # Default dist folder
 dist/
 
-# My files
+# My Files
 lwc/resources
-simulator/samples/**
+simulator/samples/*.js

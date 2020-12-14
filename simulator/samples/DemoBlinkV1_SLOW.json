@@ -1,0 +1,246 @@
+[
+	{ "DEBUG": "Loop - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"taskQueue": "+|(anonymous)"
+	},
+	{
+		"lineNumber": "12",
+		"stack": "+|(anonymous)",
+		"taskQueue": "-|(anonymous)"
+	},
+	{
+		"lineNumber": "1",
+		"stack": "+|onVersion1()"
+	},
+	{
+		"lineNumber": "2"
+	},
+	{
+		"lineNumber": "3"
+	},
+	{
+		"lineNumber": "4"
+	},
+	{
+		"lineNumber": "5"
+	},
+	{
+		"lineNumber": "6",
+		"console": "+|Counter: 1"
+	},
+	{
+		"lineNumber": "7-9",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 1)"
+	},
+	{
+		"lineNumber": "10"
+	},
+	{
+		"TIMER": "ON"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 2)",
+		"console": "+|Counter: 2"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 3)",
+		"console": "+|Counter: 3"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 4)",
+		"console": "+|Counter: 4"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 5)",
+		"console": "+|Counter: 5"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 6)",
+		"console": "+|Counter: 6"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 7)",
+		"console": "+|Counter: 7"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 8)",
+		"console": "+|Counter: 8"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 9)",
+		"console": "+|Counter: 9"
+	},
+	{
+		"lineNumber": "4-10",
+		"webAPI": "+|🕒 500ms #7-9 (TCounter = 10)",
+		"console": "+|Counter: 10"
+	},
+	{
+		"lineNumber": "11"
+	},
+	{
+		"TIMER": "OFF"
+	},
+	{
+		"lineNumber": "13",
+		"console": "+|Done",
+		"stack": "-|onVersion1()"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|(anonymous)"
+	},
+	{ "DEBUG": "All timers expire - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": [
+			"-|🕒 500ms #7-9 (TCounter = 1)",
+			"-|🕒 500ms #7-9 (TCounter = 2)",
+			"-|🕒 500ms #7-9 (TCounter = 3)",
+			"-|🕒 500ms #7-9 (TCounter = 4)",
+			"-|🕒 500ms #7-9 (TCounter = 5)",
+			"-|🕒 500ms #7-9 (TCounter = 6)",
+			"-|🕒 500ms #7-9 (TCounter = 7)",
+			"-|🕒 500ms #7-9 (TCounter = 8)",
+			"-|🕒 500ms #7-9 (TCounter = 9)",
+			"-|🕒 500ms #7-9 (TCounter = 10)"
+		],
+		"taskQueue": [
+			"+|#7-9 (TCounter = 1)",
+			"+|#7-9 (TCounter = 2)",
+			"+|#7-9 (TCounter = 3)",
+			"+|#7-9 (TCounter = 4)",
+			"+|#7-9 (TCounter = 5)",
+			"+|#7-9 (TCounter = 6)",
+			"+|#7-9 (TCounter = 7)",
+			"+|#7-9 (TCounter = 8)",
+			"+|#7-9 (TCounter = 9)",
+			"+|#7-9 (TCounter = 10)"
+		]
+	},
+	{ "DEBUG": "Execute - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "7",
+		"taskQueue": "-|#7-9 (TCounter = 1)",
+		"stack": "+|#7-9 (TCounter = 1)"
+	},
+	{
+		"lineNumber": "8",
+		"console": "+|Flip: 1"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|#7-9 (TCounter = 1)"
+	},
+	{
+		"lineNumber": "0"
+	},
+	{
+		"TIMER": "ON"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 2)",
+		"stack": "+|#7-9 (TCounter = 2)",
+		"console": "+|Flip: 2"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 2)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 3)",
+		"stack": "+|#7-9 (TCounter = 3)",
+		"console": "+|Flip: 3"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 3)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 4)",
+		"stack": "+|#7-9 (TCounter = 4)",
+		"console": "+|Flip: 4"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 4)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 5)",
+		"stack": "+|#7-9 (TCounter = 5)",
+		"console": "+|Flip: 5"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 5)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 6)",
+		"stack": "+|#7-9 (TCounter = 6)",
+		"console": "+|Flip: 6"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 6)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 7)",
+		"stack": "+|#7-9 (TCounter = 7)",
+		"console": "+|Flip: 7"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 7)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 8)",
+		"stack": "+|#7-9 (TCounter = 8)",
+		"console": "+|Flip: 8"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 8)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 9)",
+		"stack": "+|#7-9 (TCounter = 9)",
+		"console": "+|Flip: 9"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 9)"
+	},
+	{
+		"lineNumber": "7-9",
+		"taskQueue": "-|#7-9 (TCounter = 10)",
+		"stack": "+|#7-9 (TCounter = 10)",
+		"console": "+|Flip: 10"
+	},
+	{
+		"lineNumber": "7-9",
+		"stack": "-|#7-9 (TCounter = 10)"
+	},
+	{
+		"TIMER": "OFF"
+	},
+	{
+		"lineNumber": "0"
+	}
+]
