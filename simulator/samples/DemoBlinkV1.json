@@ -37,9 +37,6 @@
 		"lineNumber": "10"
 	},
 	{
-		"TIMER": "ON"
-	},
-	{
 		"lineNumber": "4-10",
 		"webAPI": [
 			"+|🕒 500ms #7-9 (TCounter = 2)",
@@ -56,9 +53,6 @@
 	},
 	{
 		"lineNumber": "11"
-	},
-	{
-		"TIMER": "OFF"
 	},
 	{
 		"lineNumber": "13",
@@ -118,9 +112,6 @@
 		"lineNumber": "0"
 	},
 	{
-		"TIMER": "ON"
-	},
-	{
 		"lineNumber": "0",
 		"stack": [
 			"-|#7-9 (TCounter = 2)",
@@ -145,11 +136,5 @@
 			"-|#7-9 (TCounter = 10)"
 		],
 		"console": ["+|Flip: 2", "+|Flip: 3", "+|Flip: 4", "+|Flip: 5", "+|Flip: 6", "+|Flip: 7", "+|Flip: 8", "+|Flip: 9", "+|Flip: 10"]
-	},
-	{
-		"TIMER": "OFF"
-	},
-	{
-		"lineNumber": "0"
 	}
 ]
