@@ -1,122 +1,461 @@
 [
 	{
-		"lineNumber": "1",
-		"taskQueue": "+|onVersion2()"
+		"lineNumber": "0",
+		"taskQueue": "+|(anonymous)"
+	},
+	{
+		"lineNumber": "17",
+		"stack": "+|(anonymous)",
+		"taskQueue": "-|(anonymous)"
 	},
 	{
 		"lineNumber": "1",
-		"stack": "+|onVersion2()",
-		"taskQueue": "-|onVersion2()"
+		"stack": "+|onVersion2()"
 	},
 	{
 		"lineNumber": "2"
 	},
 	{
-		"lineNumber": "3-12"
+		"lineNumber": "3"
 	},
 	{
-		"lineNumber": "13"
+		"lineNumber": "4-14"
+	},
+	{
+		"lineNumber": "15"
 	},
 	{ "DEBUG": "Loop #1 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
 	{
-		"lineNumber": "3",
+		"lineNumber": "4",
 		"stack": "+|loop(1)"
 	},
 	{
-		"lineNumber": "4"
+		"lineNumber": "5",
+		"console": "+|Flip: 1"
 	},
 	{
-		"lineNumber": "5-12",
-		"webAPI": "+|🕒 500ms #5-12 (nextCounter = 1)"
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 2)"
 	},
 	{
-		"lineNumber": "13"
+		"lineNumber": "14"
 	},
 	{
-		"lineNumber": "15",
+		"lineNumber": "16",
 		"stack": "-|loop(1)"
 	},
 	{
-		"lineNumber": "0",
-		"stack": "-|onVersion2()"
-	},
-	{
-		"lineNumber": "0"
+		"lineNumber": "18",
+		"stack": "-|onVersion2()",
+		"console": "+|Flipping..."
 	},
 	{
 		"lineNumber": "0",
-		"webAPI": ["-|🕒 500ms #5-12 (nextCounter = 1)"],
-		"taskQueue": ["+|#5-12 (nextC.. = 1)"]
+		"stack": "-|(anonymous)"
+	},
+	{ "DEBUG": "Loop #2 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 2)"],
+		"taskQueue": ["+|#6-13 (TCounter = 2)"]
 	},
 	{
-		"lineNumber": "5",
-		"stack": "+|#5-12 (nextCounter = 1)",
-		"taskQueue": ["-|#5-12 (nextC.. = 1)"]
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 2)",
+		"taskQueue": ["-|#6-13 (TCounter = 2)"]
 	},
 	{
-		"lineNumber": "6"
-	},
-	{
-		"lineNumber": "7"
+		"lineNumber": "7",
+		"console": "+|TCounter: 2"
 	},
 	{
 		"lineNumber": "8"
 	},
-	{ "DEBUG": "Loop #2 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
 	{
-		"lineNumber": "3",
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
 		"stack": "+|loop(2)"
 	},
 	{
-		"lineNumber": "4"
+		"lineNumber": "5",
+		"console": "+|Flip: 2"
 	},
 	{
-		"lineNumber": "5-12",
-		"webAPI": "+|🕒 500ms #5-12 (nextCounter = 2)"
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 3)"
 	},
 	{
-		"lineNumber": "13",
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
 		"stack": "-|loop(2)"
 	},
 	{
-		"lineNumber": "0",
-		"stack": "-|#5-12 (nextCounter = 1)"
-	},
-	{
-		"lineNumber": "0"
+		"lineNumber": "12"
 	},
 	{
 		"lineNumber": "0",
-		"webAPI": ["-|🕒 500ms #5-12 (nextCounter = 2)"],
-		"taskQueue": ["+|#5-12 (nextC.. = 2)"]
+		"stack": "-|#6-13 (TCounter = 2)"
 	},
 	{ "DEBUG": "Loop #3 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
 	{
-		"lineNumber": "3",
-		"stack": "+|loop(2)",
-		"taskQueue": ["-|#5-12 (nextC.. = 2)"]
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 3)"],
+		"taskQueue": ["+|#6-13 (TCounter = 3)"]
 	},
 	{
-		"lineNumber": "4"
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 3)",
+		"taskQueue": ["-|#6-13 (TCounter = 3)"]
 	},
 	{
-		"lineNumber": "5-12",
-		"webAPI": "+|🕒 500ms #5-12 (nextCounter = 3)"
+		"lineNumber": "7",
+		"console": "+|TCounter: 3"
 	},
 	{
-		"lineNumber": "13",
-		"stack": "-|loop(2)"
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(3)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 3"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 4)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(3)"
+	},
+	{
+		"lineNumber": "12"
 	},
 	{
 		"lineNumber": "0",
-		"stack": "-|#5-12 (nextCounter = 2)"
+		"stack": "-|#6-13 (TCounter = 3)"
+	},
+	{ "DEBUG": "Loop #4 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 4)"],
+		"taskQueue": ["+|#6-13 (TCounter = 4)"]
 	},
 	{
-		"lineNumber": "0"
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 4)",
+		"taskQueue": ["-|#6-13 (TCounter = 4)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 4"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(4)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 4"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 5)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(4)"
+	},
+	{
+		"lineNumber": "12"
 	},
 	{
 		"lineNumber": "0",
-		"webAPI": ["-|🕒 500ms #5-12 (nextCounter = 3)"],
-		"taskQueue": ["+|#5-12 (nextC.. = 3)"]
+		"stack": "-|#6-13 (TCounter = 4)"
+	},
+	{ "DEBUG": "Loop #5 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 5)"],
+		"taskQueue": ["+|#6-13 (TCounter = 5)"]
+	},
+	{
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 5)",
+		"taskQueue": ["-|#6-13 (TCounter = 5)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 5"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(5)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 5"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 6)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(5)"
+	},
+	{
+		"lineNumber": "12"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#6-13 (TCounter = 5)"
+	},
+	{ "DEBUG": "Loop #6 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 6)"],
+		"taskQueue": ["+|#6-13 (TCounter = 6)"]
+	},
+	{
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 6)",
+		"taskQueue": ["-|#6-13 (TCounter = 6)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 6"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(6)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 6"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 7)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(6)"
+	},
+	{
+		"lineNumber": "12"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#6-13 (TCounter = 6)"
+	},
+	{ "DEBUG": "Loop #7 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 7)"],
+		"taskQueue": ["+|#6-13 (TCounter = 7)"]
+	},
+	{
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 7)",
+		"taskQueue": ["-|#6-13 (TCounter = 7)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 7"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(7)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 7"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 8)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(7)"
+	},
+	{
+		"lineNumber": "12"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#6-13 (TCounter = 7)"
+	},
+	{ "DEBUG": "Loop #8 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 8)"],
+		"taskQueue": ["+|#6-13 (TCounter = 8)"]
+	},
+	{
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 8)",
+		"taskQueue": ["-|#6-13 (TCounter = 8)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 8"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(8)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 8"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 9)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(8)"
+	},
+	{
+		"lineNumber": "12"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#6-13 (TCounter = 8)"
+	},
+	{ "DEBUG": "Loop #9 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 9)"],
+		"taskQueue": ["+|#6-13 (TCounter = 9)"]
+	},
+	{
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 9)",
+		"taskQueue": ["-|#6-13 (TCounter = 9)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 9"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "9"
+	},
+	{
+		"lineNumber": "4",
+		"stack": "+|loop(9)"
+	},
+	{
+		"lineNumber": "5",
+		"console": "+|Flip: 9"
+	},
+	{
+		"lineNumber": "6-13",
+		"webAPI": "+|🕒 500ms #6-13 (TCounter = 10)"
+	},
+	{
+		"lineNumber": "14"
+	},
+	{
+		"lineNumber": "9",
+		"stack": "-|loop(9)"
+	},
+	{
+		"lineNumber": "12"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#6-13 (TCounter = 9)"
+	},
+	{ "DEBUG": "Loop #10 - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" },
+	{
+		"lineNumber": "0",
+		"webAPI": ["-|🕒 500ms #6-13 (TCounter = 10)"],
+		"taskQueue": ["+|#6-13 (TCounter = 10)"]
+	},
+	{
+		"lineNumber": "6",
+		"stack": "+|#6-13 (TCounter = 10)",
+		"taskQueue": ["-|#6-13 (TCounter = 10)"]
+	},
+	{
+		"lineNumber": "7",
+		"console": "+|TCounter: 10"
+	},
+	{
+		"lineNumber": "8"
+	},
+	{
+		"lineNumber": "11",
+		"console": "+|Done"
+	},
+	{
+		"lineNumber": "12"
+	},
+	{
+		"lineNumber": "0",
+		"stack": "-|#6-13 (TCounter = 10)"
 	}
 ]
