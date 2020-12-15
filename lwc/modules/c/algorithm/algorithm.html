@@ -1,0 +1,21 @@
+<template>
+	<c-tabset variant="vertical" default-tab="Slides">
+		<c-tab label="Slides">
+			<iframe
+				src="https://docs.google.com/presentation/d/e/2PACX-1vTp9uAKbR2goa4AbKKLXq57AkqaVkSMiwk-81DoxQkZ3zzGu-BKnyZmdvV08BSr-Fz7FR_o7UmZTwWU/embed?start=true&loop=false&delayms=600000"
+				frameborder="0"
+				style="width: 100%; height: 90vh"
+				allowfullscreen="true"
+				mozallowfullscreen="true"
+				webkitallowfullscreen="true"
+			></iframe>
+		</c-tab>
+		<c-tab label="Flowchart">
+			<c-show-code path="EventLoopFlowChart.png"></c-show-code>
+		</c-tab>
+		<c-tab label="Code">
+			<c-show-code path="EventLoop.png"></c-show-code>
+		</c-tab>
+	</c-tabset>
+	<div class="slds-align_absolute-center slds-p-top_medium">&nbsp;</div>
+</template>

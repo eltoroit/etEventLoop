@@ -1,7 +1,7 @@
 {
 	"name": "et-event-loop",
 	"description": "Understanding the JavaScript Event Loop | @ELTOROIT | DreamTX Presentation | December 17, 2020",
-	"version": "0.3.2",
+	"version": "0.3.3",
 	"author": "Andres Perez",
 	"bugs": "https://github.com/eltoroit/etEventLoop/issues",
 	"dependencies": {
