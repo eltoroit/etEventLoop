@@ -1,7 +1,7 @@
 {
 	"name": "et-event-loop",
-	"description": "Understanding the JavaScript Event Loop | @ELTOROIT | DreamTX Presentation | December 17, 2020",
-	"version": "0.3.3",
+	"description": "@ELTOROIT | DreamTX '20 Presentation | December 17th, 2020. Build this presentation named 'Understanding the JavaScript Event Loop' for Dreamforce '20 (DreamTX) to help prepare participants for the Salesforce JavaScript Developer I certification -->",
+	"version": "0.3.4",
 	"author": "Andres Perez",
 	"bugs": "https://github.com/eltoroit/etEventLoop/issues",
 	"dependencies": {
@@ -23,10 +23,10 @@
 		"npm": ">=6.4.1",
 		"yarn": ">=1.9.4"
 	},
-	"homepage": "https://github.com/eltoroit/etEventLoop",
+	"homepage": "https://eteventloop.herokuapp.com/",
 	"keywords": [
 		"DreamTX",
-		"ELTOROIT",
+		"@ELTOROIT",
 		"JavaScript",
 		"EventLoop",
 		"Event Loop",

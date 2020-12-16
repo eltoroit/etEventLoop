@@ -1,24 +1,18 @@
 <template>
-	<div class="slds-p-around_x-small">
-		<lightning-layout horizontal-align="spread" multiple-rows>
+	<div class="slds-p-horizontal_x-small">
+		<lightning-layout horizontal-align="spread" multiple-rows style="height: 100vh">
 			<lightning-layout-item size="12">
-				<div class="slds-text-heading_large slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
-			</lightning-layout-item>
-			<!-- <lightning-layout-item size="12">
-				<div class="slds-text-heading_small slds-align_absolute-center">
-					<a href="https://etEventLoop.herokuapp.com" style="color: black; letter-spacing: 0.3em; font-weight: bold">https://etEventLoop.herokuapp.com</a>
+				<div class="slds-p-aroundxx-small">
+					<div class="slds-text-heading_large slds-align_absolute-center">Understanding the JavaScript Event Loop</div>
+					<div class="slds-text-heading_small slds-align_absolute-center">By @ELTOROIT</div>
 				</div>
-			</lightning-layout-item> -->
-			<lightning-layout-item size="12">
-				<div class="slds-text-heading_small slds-align_absolute-center">By @ELTOROIT</div>
-				<div class="slds-p-bottom_xx-small">&nbsp;</div>
 			</lightning-layout-item>
-			<lightning-layout-item size="12">
-				<div style="background-color: white">
-					<c-tabset default-tab="Who Am I?" variant="scoped" style="width: 100%; display: inline-block">
+			<lightning-layout-item size="12" style="height: 92%">
+				<div style="background-color: white; height: 100%">
+					<c-tabset default-tab="Who Am I?" variant="scoped" style="width: 100%; height: 100%; display: inline-block">
 						<c-tab label="Who Am I?">
-							<div class="slds-align_absolute-center pageSize" style="background-color: white">
-								<img src="/resources/bio.png" style="max-height: 100%; max-width: 100%; display: block" />
+							<div class="slds-align_absolute-center pageSize" style="background-color: white; height: 100%">
+								<img src="/resources/bio.png" style="height: 833px" />
 							</div>
 						</c-tab>
 						<c-tab label="Simulator">
@@ -40,7 +34,7 @@
 							</div>
 						</c-tab>
 						<c-tab label="Resources">
-							<div class="pageSize">
+							<div class="pageSize slds-scrollable_y" style="height: 834px">
 								<div class="slds-text-heading_large slds-p-bottom_xx-large">Resources...</div>
 
 								<!-- My Files -->
@@ -134,14 +128,11 @@
 										<a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model" target="_blank">HTML Specs: 8.1.6.3 Processing model</a>
 									</li>
 								</ul>
-								<div class="slds-p-vertical_xxx-large">&nbsp;</div>
+								<!-- <div class="slds-p-vertical_xxx-large">&nbsp;</div> -->
 							</div>
 						</c-tab>
 					</c-tabset>
 				</div>
-			</lightning-layout-item>
-			<lightning-layout-item style="background-color: white" size="12">
-				<div class="slds-p-bottom_xx-small">&nbsp;</div>
 			</lightning-layout-item>
 		</lightning-layout>
 	</div>

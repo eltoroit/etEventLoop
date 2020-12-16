@@ -15,74 +15,76 @@
 				<img src="/resources/demos/RotatingGlobe.gif" style="width: 50%" />
 			</div>
 		</lightning-layout-item>
+		<lightning-layout-item size="12">
+			<c-tabset variant="vertical" default-tab="Test" onswitch={onTabSwitch}>
+				<c-tab label="Test">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium">
+								<c-button label="Flip Image" onclick={onFlip}></c-button>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="blinkTest2.png" img-style="height:465px"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The button turns red while clicked</li>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+						<!-- <lightning-layout-item size="12">
+							<lightning-button if:false={isVisible} label="Show Image" onclick={onShowImage} variant="Base"></lightning-button>
+							<lightning-button if:true={isVisible} label="Hide Image" onclick={onHideImage} variant="Base"></lightning-button>
+						</lightning-layout-item> -->
+					</lightning-layout>
+				</c-tab>
+				<c-tab label="Version #1">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium">
+								<c-button label="Version #1" onclick={onVersion1}></c-button>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="blinkVersion1.png"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The image does <b>not</b> blink!</li>
+									<li>All the counters fire first, at the same time</li>
+									<li>Half a second later all the timers run, few milliseconds apart</li>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</c-tab>
+				<c-tab label="Version #2">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium">
+								<c-button label="Version #2" onclick={onVersion2}></c-button>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="blinkVersion2.png" img-style="height:465px"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The image blinks as expected</li>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</c-tab>
+			</c-tabset>
+		</lightning-layout-item>
 	</lightning-layout>
-	<c-tabset variant="vertical" default-tab="Test" onswitch={onTabSwitch}>
-		<c-tab label="Test">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium">
-						<c-button label="Flip Image" onclick={onFlip}></c-button>
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="blinkTest2.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The button turns red while clicked</li>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-				<!-- <lightning-layout-item size="12">
-					<lightning-button if:false={isVisible} label="Show Image" onclick={onShowImage} variant="Base"></lightning-button>
-					<lightning-button if:true={isVisible} label="Hide Image" onclick={onHideImage} variant="Base"></lightning-button>
-				</lightning-layout-item> -->
-			</lightning-layout>
-		</c-tab>
-		<c-tab label="Version #1">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium">
-						<c-button label="Version #1" onclick={onVersion1}></c-button>
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="blinkVersion1.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The image does <b>not</b> blink!</li>
-							<li>All the counters fire first, at the same time</li>
-							<li>Half a second later all the timers run, few milliseconds apart</li>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</c-tab>
-		<c-tab label="Version #2">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium">
-						<c-button label="Version #2" onclick={onVersion2}></c-button>
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="blinkVersion2.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The image blinks as expected</li>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</c-tab>
-	</c-tabset>
-	<div class="slds-align_absolute-center slds-p-top_medium">&nbsp;</div>
+	<!-- <div class="slds-align_absolute-center slds-p-top_medium">&nbsp;</div> -->
 </template>
