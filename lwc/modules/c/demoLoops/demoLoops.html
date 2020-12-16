@@ -1,128 +1,134 @@
 <template>
-	<div class="slds-is-relative">
-		<div class="slds-text-heading_large slds-p-bottom_x-large">Long runnning processes can block the execution!</div>
-		<div class="slds-text-heading_medium slds-p-bottom_x-large">
-			I want to simulate an operation that takes a long time to complete and to make sure the user does not panic while waiting, I will show a SLDS spinner.<br />
-		</div>
-		<div class="slds-text-heading_medium slds-p-bottom_x-large">I will simulate this using a loop for <b>5 seconds</b>.</div>
-		<div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
-		<template if:true={showSpinner}>
-			<lightning-spinner variant="brand" alternative-text="Demo..."></lightning-spinner>
-		</template>
-	</div>
-	<c-tabset variant="vertical" default-tab="Test" onswitch={onTabSwitch}>
-		<c-tab label="Test">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium">
-						<c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
-						<c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="loopTest.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The button turns red while clicked</li>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</c-tab>
-		<c-tab label="While Loop">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium"><c-button label="Start While Loop" onclick={onWhileLoop}></c-button></div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="loopWhile.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The UI freezes!</li>
-							<c-show-notes>
-								<li>Where is the spinner?</li>
-								<li>The button remains clicked (red) during the execution of the loop</li>
-								<li>The cursor is stuck on a pointer <br /><img src="/resources/demos/cursorPointer.png" style="height: 2rem" /></li>
-							</c-show-notes>
-							<li>
-								<i>There are about <b>2.5M</b> iterations per second (on my computer)</i>
-							</li>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</c-tab>
-		<c-tab label="Promise">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium">
-						<c-button label="Start Promise Loop" onclick={onPromiseLoop}></c-button>
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="loopPromise.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The UI freezes!</li>
-							<c-show-notes>
-								<li>Where is the spinner?</li>
-								<li>The button remains clicked (red) during the execution of the loop</li>
-								<li>The cursor is stuck on a pointer <br /><img src="/resources/demos/cursorPointer.png" style="height: 2rem" /></li>
-							</c-show-notes>
-							<li>
-								<i>There are about <b>100K</b> iterations per second (on my computer)</i>
-							</li>
-							<li>Promises go into the microtasks queue!</li>
-							<c-show-notes>
-								<li>Execute all the microtasks pending until the queue is empty</li>
-								<li>New microtasks execute on the <b>same</b> Event Loop iteration</li>
-								<li>Microtasks execute before UI updates</li>
-							</c-show-notes>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</c-tab>
-		<c-tab label="setTimeout">
-			<lightning-layout multiple-rows>
-				<lightning-layout-item size="12">
-					<div class="slds-m-bottom_medium">
-						<c-button label="Start setTimeout Loop" onclick={onSetTimeoutLoop}></c-button>
-					</div>
-				</lightning-layout-item>
-				<lightning-layout-item size="8">
-					<c-show-code path="loopSetTimeout.png"></c-show-code>
-				</lightning-layout-item>
-				<lightning-layout-item size="4">
-					<div class="slds-m-left_medium">
-						<c-show-notes>
-							<li><b> Open the inspector tool and watch the event working </b></li>
-							<li>The UI does <b>not</b> freeze</li>
-							<c-show-notes>
-								<li>Look mom, the spinner!</li>
-							</c-show-notes>
-							<li>
-								<i>There are about <b>200</b> iterations per second (on my computer)</i>
-							</li>
-							<li>Timers go into the tasks queue!</li>
-							<c-show-notes>
-								<li>Execute <b>only one</b> task per Event Loop iteration</li>
-								<li>New tasks execute on the <b>next</b> Event Loop iteration</li>
-							</c-show-notes>
-						</c-show-notes>
-					</div>
-				</lightning-layout-item>
-			</lightning-layout>
-		</c-tab>
-	</c-tabset>
-	<div class="slds-align_absolute-center slds-p-top_medium">&nbsp;</div>
+	<lightning-layout multiple-rows horizontal-align="spread">
+		<lightning-layout-item size="12">
+			<div class="slds-is-relative">
+				<div class="slds-text-heading_large slds-p-bottom_x-large">Long runnning processes can block the execution!</div>
+				<div class="slds-text-heading_medium slds-p-bottom_x-large">
+					I want to simulate an operation that takes a long time to complete and to make sure the user does not panic while waiting, I will show a SLDS spinner.<br />
+				</div>
+				<div class="slds-text-heading_medium slds-p-bottom_x-large">I will simulate this using a loop for <b>5 seconds</b>.</div>
+				<div class="slds-text-heading_medium slds-p-bottom_x-large">What would be the best way to implement this?</div>
+				<template if:true={showSpinner}>
+					<lightning-spinner variant="brand" alternative-text="Demo..."></lightning-spinner>
+				</template>
+			</div>
+		</lightning-layout-item>
+		<lightning-layout-item size="12">
+			<c-tabset variant="vertical" default-tab="Test" onswitch={onTabSwitch}>
+				<c-tab label="Test">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium">
+								<c-button if:false={showSpinner} label="Show Spinner" onclick={onShowSpinner}></c-button>
+								<c-button if:true={showSpinner} label="Hide Spinner" onclick={onHideSpinner}></c-button>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="loopTest.png"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The button turns red while clicked</li>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</c-tab>
+				<c-tab label="While Loop">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium"><c-button label="Start While Loop" onclick={onWhileLoop}></c-button></div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="loopWhile.png"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The UI freezes!</li>
+									<c-show-notes>
+										<li>Where is the spinner?</li>
+										<li>The button remains clicked (red) during the execution of the loop</li>
+										<li>The cursor is stuck on a pointer <br /><img src="/resources/demos/cursorPointer.png" style="height: 2rem" /></li>
+									</c-show-notes>
+									<li>
+										<i>There are about <b>2.5M</b> iterations per second (on my computer)</i>
+									</li>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</c-tab>
+				<c-tab label="Promise">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium">
+								<c-button label="Start Promise Loop" onclick={onPromiseLoop}></c-button>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="loopPromise.png" img-style="height:505px"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The UI freezes!</li>
+									<c-show-notes>
+										<li>Where is the spinner?</li>
+										<li>The button remains clicked (red) during the execution of the loop</li>
+										<li>The cursor is stuck on a pointer <br /><img src="/resources/demos/cursorPointer.png" style="height: 2rem" /></li>
+									</c-show-notes>
+									<li>
+										<i>There are about <b>100K</b> iterations per second (on my computer)</i>
+									</li>
+									<li>Promises go into the microtasks queue!</li>
+									<c-show-notes>
+										<li>Execute all the microtasks pending until the queue is empty</li>
+										<li>New microtasks execute on the <b>same</b> Event Loop iteration</li>
+										<li>Microtasks execute before UI updates</li>
+									</c-show-notes>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</c-tab>
+				<c-tab label="setTimeout">
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12">
+							<div class="slds-m-bottom_medium">
+								<c-button label="Start setTimeout Loop" onclick={onSetTimeoutLoop}></c-button>
+							</div>
+						</lightning-layout-item>
+						<lightning-layout-item size="8">
+							<c-show-code path="loopSetTimeout.png" img-style="height:505px"></c-show-code>
+						</lightning-layout-item>
+						<lightning-layout-item size="4">
+							<div class="slds-m-left_medium">
+								<c-show-notes>
+									<li><b> Open the inspector tool and watch the event working </b></li>
+									<li>The UI does <b>not</b> freeze</li>
+									<c-show-notes>
+										<li>Look mom, the spinner!</li>
+									</c-show-notes>
+									<li>
+										<i>There are about <b>200</b> iterations per second (on my computer)</i>
+									</li>
+									<li>Timers go into the tasks queue!</li>
+									<c-show-notes>
+										<li>Execute <b>only one</b> task per Event Loop iteration</li>
+										<li>New tasks execute on the <b>next</b> Event Loop iteration</li>
+									</c-show-notes>
+								</c-show-notes>
+							</div>
+						</lightning-layout-item>
+					</lightning-layout>
+				</c-tab>
+			</c-tabset>
+		</lightning-layout-item>
+	</lightning-layout>
+	<!-- <div class="slds-align_absolute-center slds-p-top_medium">&nbsp;</div> -->
 </template>

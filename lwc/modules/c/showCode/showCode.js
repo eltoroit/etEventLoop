@@ -2,6 +2,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class ShowCode extends LightningElement {
 	_path;
+	@api imgStyle;
 
 	@api
 	get path() {
