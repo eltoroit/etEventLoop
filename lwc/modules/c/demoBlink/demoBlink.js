@@ -18,11 +18,10 @@ export default class DemoBlink extends LightningElement {
 		this.logStart();
 		while (this.counter < this.maxTimes) {
 			this.counter++;
-			console.log(`Counter: ${this.counter}`);
+			console.log(`Loop | ${this.getDTTM()} | Counter: ${this.counter < 10 ? '0' : ''}${this.counter}`);
 			setTimeout(
 				(TCounter) => {
-					console.log(`TCounter: ${TCounter}`);
-					this.flipImage();
+					this.flipImage(TCounter);
 				},
 				500,
 				this.counter
@@ -35,15 +34,14 @@ export default class DemoBlink extends LightningElement {
 		this.logStart();
 		const loop = (counter) => {
 			this.counter = counter;
-			console.log(`Counter: ${counter}`);
-			this.flipImage();
+			this.flipImage(counter);
 			setTimeout(
 				(TCounter) => {
-					console.log(`TCounter: ${TCounter}`);
+					// console.log(`TCounter: ${TCounter} | ${this.getDTTM()}`);
 					if (this.counter < this.maxTimes) {
 						loop(TCounter);
 					} else {
-						this.updateUI(true);
+						this.updateUI(true, TCounter);
 					}
 				},
 				500,
@@ -62,15 +60,19 @@ export default class DemoBlink extends LightningElement {
 		this.flipImage();
 	}
 
-	flipImage() {
-		this.updateUI(!this.isVisible);
+	flipImage(TCounter) {
+		this.updateUI(!this.isVisible, TCounter);
 	}
 
-	updateUI(isVisible) {
+	updateUI(isVisible, TCounter) {
+		let msgTCounter = '';
 		this.isVisible = isVisible;
 		let image = this.template.querySelector('div[data-id="image"]');
 		image.style.visibility = isVisible ? 'visible' : 'hidden';
-		console.log(`${this.isVisible ? 'ON' : 'OFF'} | ${this.getDTTM()}`);
+		if (TCounter !== undefined) {
+			msgTCounter = ` | Counter: ${TCounter < 10 ? '0' : ''}${TCounter}`;
+			console.log(`${this.isVisible ? ' ON' : 'OFF'} | ${this.getDTTM()}${msgTCounter}`);
+		}
 	}
 
 	logStart() {
@@ -83,6 +85,7 @@ export default class DemoBlink extends LightningElement {
 		let lastSpace = dttm.lastIndexOf(' ');
 		let dttm1 = `${dttm.substring(0, lastSpace)}`;
 		let dttm2 = `${dttm.substring(lastSpace, dttm.length)}`;
-		return `${dttm1}.${now.getMilliseconds()}${dttm2}`;
+		let ms = now.getMilliseconds();
+		return `${dttm1}.${ms < 100 ? '0' : ''}${ms < 10 ? '0' : ''}${ms}${dttm2}`;
 	}
 }
