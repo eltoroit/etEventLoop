@@ -41,7 +41,7 @@ export default class DemoBlink extends LightningElement {
 					if (this.counter < this.maxTimes) {
 						loop(TCounter);
 					} else {
-						this.updateUI(true, TCounter);
+						this.updateUI(true);
 					}
 				},
 				500,
