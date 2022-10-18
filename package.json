@@ -6,22 +6,17 @@
 	"bugs": "https://github.com/eltoroit/etEventLoop/issues",
 	"dependencies": {
 		"compression": "1.7.4",
-		"express": "4.17.1",
-		"helmet": "4.2.0",
-		"lightning-base-components": "1.11.1-alpha"
+		"express": "4.18.2",
+		"helmet": "6.0.0",
+		"lightning-base-components": "1.16.6-alpha"
 	},
 	"devDependencies": {
-		"@salesforce-ux/design-system": "2.13.7",
-		"eslint": "7.15.0",
-		"husky": "4.3.5",
-		"lint-staged": "10.5.3",
+		"@salesforce-ux/design-system": "2.19.0",
+		"eslint": "8.25.0",
+		"husky": "8.0.1",
+		"lint-staged": "13.0.3",
 		"lwc-services": "2.3.0",
-		"prettier": "2.2.1"
-	},
-	"engines": {
-		"node": ">=10.13.0",
-		"npm": ">=6.4.1",
-		"yarn": ">=1.9.4"
+		"prettier": "2.7.1"
 	},
 	"homepage": "https://eteventloop.herokuapp.com/",
 	"keywords": [
